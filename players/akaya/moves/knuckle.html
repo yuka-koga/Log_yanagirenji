@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ナックルサーブ-切原赤也 | Log_yanagirenji</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+    .sidebar {
+      width: 220px;
+      background-color: #dcdcdc;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .sidebar h1 {
+      font-size: 16px;
+      margin-bottom: 5px;
+      color: #222;
+    }
+    .sidebar h2 {
+      font-size: 14px;
+      margin-bottom: 16px;
+      color: darkred;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      font-size: 14px;
+    }
+    .sidebar li {
+      margin-bottom: 8px;
+    }
+    .sidebar li.active {
+      font-weight: bold;
+      color: darkred;
+    }
+    .sidebar a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+    .main {
+      flex: 1;
+      padding: 40px;
+      background-color: #fff;
+      overflow-y: auto;
+    }
+    h1 {
+      font-size: 24px;
+      color: darkred;
+      margin-bottom: 20px;
+    }
+    .description {
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    .observation-log,
+    .evaluation {
+      margin-bottom: 30px;
+    }
+    .observation-log h2,
+    .evaluation h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 4px;
+    }
+    .observation-log ul,
+    .evaluation ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .observation-log li,
+    .evaluation li {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+    .thumb-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .thumb-gallery img {
+      width: 200px;
+      height: auto;
+      cursor: pointer;
+      border: 1px solid #aaa;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    .modal-content {
+      position: relative;
+      margin: 10% auto;
+      padding: 20px;
+      background: #fff;
+      width: 90%;
+      max-width: 600px;
+    }
+    .modal-content img {
+      width: 100%;
+    }
+    .modal-content p {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h1>技術研究ログ</h1>
+      <h2>｜切原赤也</h2>
+      <ul>
+        <li><a href="splitstep.html">- スプリットステップ</a></li>
+        <li class="active">- ナックルサーブ</li>
+        <li><a href="muga.html">- 無我の境地</a></li>
+        <li><a href="traits.html">- 癖・兆候</a></li>
+        <li><a href="../index.html">[Player: Kirihara Akaya]</a></li>
+        <li><a href="../../../index.html">[TOP]</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <h1>ナックルサーブ｜Observation Notes</h1>
+      <div class="description">
+<p style="font-size: 13px; color: #666;">本人以外どこに跳ねるか予測のつかないサーブ。<br>
+        指を立ててボールを握り、押し出すようにトスをあげることで特殊な回転をかけている。<br>
+        赤也はラフプレー傾向が強いため、相手の膝を直接狙いがち。試合がテンポアップしてきた際は注視する必要あり。</p>
+      </div>
+
+      <div class="evaluation">
+        <h2>技の評価</h2>
+<p style="font-size: 13px; color: #666;">やはり予測のつかなさがこのサーブの強さだ。その上で威力も高く、試合の決定打となる場面多数。<br>ただしそれは相手の膝の怪我を狙った結果であることも多いため、使用頻度やタイミングはこちらである程度管理する必要がある。</p>
+        <ul>
+          <li>球威　　：◎</li>
+          <li>使い勝手：△</li>
+          <li>回転量　：◎</li>
+          <li>決定力　：◎</li>
+        </ul>
+      </div>
+
+      <div style="font-size: 13px; color: darkred; font-weight: bold; margin: 20px 0 8px;">
+        ▶ 観察記録ファイル（全7枚）
+      </div>
+
+      <div class="thumb-gallery">
+        <img src="../../../images/akaya/moves/knuckle/rikkai00356.jpg" alt="rikkai00356" onclick="openModal('../../../images/akaya/moves/knuckle/rikkai00356.jpg', '目が充血し始めたら過集中状態になり、その後ナックルサーブを連発する傾向にある。')">
+        <img src="../../../images/akaya/moves/knuckle/rikkai00377.jpg" alt="rikkai00377" onclick="openModal('../../../images/akaya/moves/knuckle/rikkai00377.jpg', '指の形状に注目。この握りによってボールの動きを不規則に変化させる。')">
+        <img src="../../../images/akaya/moves/knuckle/rikkai00383.jpg" alt="rikkai00383" onclick="openModal('../../../images/akaya/moves/knuckle/rikkai00383.jpg', '相手を見定めるようにラケットを引き寄せる。')">
+        <img src="../../../images/akaya/moves/knuckle/rikkai00389.jpg" alt="rikkai00389" onclick="openModal('../../../images/akaya/moves/knuckle/rikkai00389.jpg', 'トス動作。ボールを前に突き出し、足を開く。')">
+        <img src="../../../images/akaya/moves/knuckle/rikkai00390.jpg" alt="rikkai00390" onclick="openModal('../../../images/akaya/moves/knuckle/rikkai00390.jpg', 'ボールリリース直前のフォーム。弓の弦を引くようなイメージ。')">
+        <img src="../../../images/akaya/moves/knuckle/rikkai00423.jpg" alt="rikkai00423" onclick="openModal('../../../images/akaya/moves/knuckle/rikkai00423.jpg', '打ち込む際は高く跳躍する。')">
+        <img src="../../../images/akaya/moves/knuckle/rikkai00413.jpg" alt="rikkai00413" onclick="openModal('../../../images/akaya/moves/knuckle/rikkai00413.jpg', '着弾直後の相手リアクション。膝に打ち込むラフプレーが基本。')">
+      </div>
+
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">×</span>
+          <img id="modal-img" src="" alt="拡大画像">
+          <p id="modal-caption"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openModal(src, caption) {
+      document.getElementById('modal-img').src = src;
+      document.getElementById('modal-caption').textContent = caption;
+      document.getElementById('modal').style.display = 'block';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

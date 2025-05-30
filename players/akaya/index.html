@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>切原赤也-Player | Log_yanagirenji</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+    .sidebar {
+      width: 250px;
+      background-color: #dcdcdc;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .sidebar h1 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li {
+      margin-bottom: 10px;
+    }
+    .sidebar li.active {
+      font-weight: bold;
+      color: darkred;
+    }
+    .sidebar a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+    .main {
+      flex: 1;
+      background-color: #ffffff;
+      padding: 40px;
+      overflow-y: scroll;
+      position: relative;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    .section h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+    .section p {
+      white-space: pre-wrap;
+      line-height: 1.6;
+    }
+    .profile-box::before {
+      content: "📂 Profile";
+      display: block;
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: darkred;
+    }
+    .profile-box {
+      background-color: #efefef;
+      border: 1px solid #bbb;
+      padding: 12px 16px;
+      font-size: 13px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    .hidden-link {
+      bottom: 10px;
+      right: 10px;
+      color: white;
+      background-color: white;
+      font-size: 12px;
+      text-decoration: none;
+    }
+    .hidden-link:hover {
+      color: #ccc;
+    }
+    .technique-list {
+      list-style: none;
+      padding-left: 0;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .technique-list li {
+      margin: 6px 0;
+    }
+    .technique-list a {
+      color: darkred;
+      text-decoration: none;
+    }
+    .technique-list a:hover {
+      text-decoration: underline;
+      color: black;
+    }
+    details summary {
+      font-size: 14px;
+      font-weight: bold;
+      color: darkred;
+      cursor: pointer;
+      margin: 12px 0 6px;
+    }
+    details[open] summary {
+      text-decoration: underline;
+    }
+    .mood-entry {
+      background: #fff;
+      border-left: 4px solid #bbb;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .mood-entry h2 {
+      font-size: 18px;
+      margin: 0 0 10px;
+      color: #222;
+    }
+    .mood-entry p {
+      font-size: 12px;
+      line-height: 1.6;
+      margin: 6px 0;
+    }
+    .mood-tag {
+      display: inline-block;
+      font-size: 12px;
+      color: #666;
+      background: #eee;
+      padding: 2px 8px;
+      border-radius: 10px;
+      margin-right: 6px;
+    }
+    .mood-date-title {
+      font-size: 14px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 1px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h1>Player</h1>
+      <ul>
+        <li><a href="../yukimura/index.html">- 幸村精市</a></li>
+        <li><a href="../sanada/index.html">- 真田弦一郎</a></li>
+        <li><a href="../marui/index.html">- 丸井ブン太</a></li>
+        <li><a href="../jackal/index.html">- ジャッカル桑原</a></li>
+        <li><a href="../niou/index.html">- 仁王雅治</a></li>
+        <li><a href="../yagyu/index.html">- 柳生比呂士</a></li>
+        <li class="active">- 切原赤也 ★</li>
+        <li><a href="../yanagi/index.html">- 柳蓮二</a></li>
+        <li><a href="../../index.html">[TOP]</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <h2>【Player: Kirihara Akaya｜切原赤也】</h2>
+<div class="profile-box">
+  <div style="display: flex; align-items: flex-start; gap: 20px;">
+    <img src="../../images/akaya/akaya_profile.jpg" alt="赤也プロフィール写真" style="width: 150px; height: auto; border: 1px solid #bbb;" />
+
+    <div>
+      <p><strong>身長：</strong>170cm　<strong>体重：</strong>58kg　<strong>利き腕：</strong>右</p>
+      <p><strong>足のサイズ：</strong>26.5cm　<strong>視力：</strong>右1.5 左1.5　<strong>血圧：</strong>高150 低90</p>
+      <p><strong>プレイスタイル：</strong>アグレッシブ・ベースライナー</p>
+      <p><strong>メーカー：</strong><br>
+        シューズ：WILSON / DT WILSON (DYNOSPHEREテクノロジー)<br>
+        ラケット：WILSON / PRO STAFF 5.5 WILSON STRETCH
+      </p>
+      <p><strong>総合評価：</strong><br>
+        通常：スピード 4 / パワー 3 / スタミナ 3 / メンタル 2 / テクニック 3 / 合計 15<br>
+        赤目：スピード 5 / パワー 4.5 / スタミナ 2 / メンタル 5 / テクニック 1.5 / 合計 16
+      </p>
+    </div>
+  </div>
+</div>
+
+  <div class="section">
+  <h2>■ ご機嫌トラッカー｜赤也の状態観測</h2>
+<p style="font-size: 13px; color: #666;">主観的な観察に基づき、日々の「ご機嫌度」を数値化</p>
+<img src="../../images/akaya/gokigen_graph.png" alt="ご機嫌トラッカーグラフ" style="max-width: 60%; margin-bottom: 10px;">
+  <details close>
+    <summary>定点記録（5月-7月）</summary>
+
+  <details>
+    <summary style="margin-left: 10px;">2025年5月</summary>
+<div class="mood-entry">
+  <h3 class="mood-date-title">2025/05/15（木）</h3>
+  <p><span class="mood-tag">気温：20℃</span><span class="mood-tag">湿度：65%</span><span class="mood-tag">睡眠：5.5h</span><span class="mood-tag">前夜食：カツカレー</span></p>
+  <p><strong>状態：</strong>午前は校内で遭遇した際、不機嫌気味だったが、午後の練習中盤から回復傾向。ラリー中の声出しが増加し、観察ログでは集中度70％以上。</p>
+  <p><strong>備考：</strong>練習前のやり取りで「今日なんかめちゃ調子いい」と発言。</p>
+</div>
+  </details>
+
+  <details>
+    <summary style="margin-left: 10px;">2025年6月</summary>
+<div class="mood-entry">
+  <h3 class="mood-date-title">2025/06/02（月）</h3>
+  <p><span class="mood-tag">気温：22℃</span><span class="mood-tag">湿度：60%</span><span class="mood-tag">睡眠：6.5h</span><span class="mood-tag">前夜食：鯖の味噌煮</span></p>
+  <p><strong>状態：</strong>全体的に好調。集中度80％超えで、全体ミーティング時も寝ていなかった。終始上機嫌で、練習後も自主練を希望。</p>
+  <p><strong>備考：</strong>俺柳蓮二に練習試合を希望。「今なら柳先輩倒せる気がするっス」と豪語。試合結果は5-2で赤也は敗北。</p>
+</div>
+
+<div class="mood-entry">
+  <h3 class="mood-date-title">2025/06/14（土）</h3>
+  <p><span class="mood-tag">気温：25℃</span><span class="mood-tag">湿度：72%</span><span class="mood-tag">睡眠：4h</span><span class="mood-tag">前夜食：カップ焼きそば</span></p>
+  <p><strong>状態：</strong>眠気とだるさを訴え、練習への集中力は低調。プレー中に舌打ちが複数回記録される。</p>
+  <p><strong>備考：</strong>夜中までゲームをしていたのが不調の原因と思われる。つられて弦一郎も神経質になっていた。</p>
+</div>
+
+<div class="mood-entry">
+  <h3 class="mood-date-title">2025/06/21（土）</h3>
+  <p><span class="mood-tag">気温：21℃</span><span class="mood-tag">湿度：67%</span><span class="mood-tag">睡眠：6h</span><span class="mood-tag">前夜食：カレー</span></p>
+  <p><strong>状態：</strong>後衛の動きが鈍く、序盤は苛立ちが見られた。中盤からは落ち着きを取り戻す。</p>
+  <p><strong>備考：</strong>試合形式中に1回ラケットを地面に叩きつけた。軽く制止。</p>
+</div>
+
+<div class="mood-entry">
+  <h3 class="mood-date-title">2025/06/26（木）</h3>
+  <p><span class="mood-tag">気温：23℃</span><span class="mood-tag">湿度：61%</span><span class="mood-tag">睡眠：6h</span><span class="mood-tag">前夜食：肉じゃが</span></p>
+  <p><strong>状態：</strong>異様なハイテンション。基礎練だったが声出し過多、動きに若干の雑さあり。集中度は高いがムラも目立つ。</p>
+  <p><strong>備考：</strong>「ねえねえ柳先輩、オレ今日超ノってないスか？」と5回発言。少し鬱陶しい。</p>
+</div>
+
+<div class="mood-entry">
+  <h3 class="mood-date-title">2025/06/30（月）</h3>
+  <p><span class="mood-tag">気温：18℃</span><span class="mood-tag">湿度：58%</span><span class="mood-tag">睡眠：7.5h</span><span class="mood-tag">前夜食：鯖の味噌煮</span></p>
+  <p><strong>状態：</strong>全体的に落ち着いた動き。集中度は安定しており、プレー内容も終始高水準。</p>
+  <p><strong>備考：</strong>赤也にしては珍しく、試合後「楽しかった」とコメント。<br>一昨日から関東大会向けメニューに切り替えているため、集中力ややる気が高まっているようだ。</p>
+</div>
+  </details>
+
+  <details>
+    <summary style="margin-left: 10px;">2025年7月</summary>
+<div class="mood-entry">
+  <h3 class="mood-date-title">2025/07/1（火）</h3>
+  <p><span class="mood-tag">気温：26℃</span><span class="mood-tag">湿度：70%</span><span class="mood-tag">睡眠：5h</span><span class="mood-tag">前夜食：チョコパン（2個）</span></p>
+  <p><strong>状態：</strong>イライラ気味で集中に波あり。練習中のミスで自己否定的な言動も。</p>
+  <p><strong>備考：</strong>睡眠と糖分の組み合わせには要注意。家庭の都合で月居自分で夕食を用意しているらしい。<br>赤也の選択は雑になりがちで翌日に影響が出る確率が高い。</p>
+</div>
+
+<div class="mood-entry">
+  <h3 class="mood-date-title">2025/07/02（水）</h3>
+  <p><span class="mood-tag">気温：20℃</span><span class="mood-tag">湿度：63%</span><span class="mood-tag">睡眠：7h</span><span class="mood-tag">前夜食：ミートソーススパゲティ</span></p>
+  <p><strong>状態：</strong>
+序盤から表情が明るく、アップ中にも軽口を叩くなど余裕あり。<br>対仁王戦では予測のつかないプレーに苦戦しつつも冷静さを維持し、切り返しが光った。ただし5-4で負けている。</p>
+  <p><strong>備考：</strong><br>休憩中に「さっきオレ動きめちゃめちゃ良くなかったスか？」と仁王に言うと、<br>仁王は「こっちは絶賛不調じゃのぉ」と返答。以降しばらく静かになった。</p>
+</div>
+
+<div class="mood-entry">
+  <h3 class="mood-date-title">2025/07/03（木）</h3>
+  <p><span class="mood-tag">気温：28℃</span><span class="mood-tag">湿度：78%</span><span class="mood-tag">睡眠：4.5h</span><span class="mood-tag">前夜食：牛丼（大盛）</span></p>
+  <p><strong>状態：</strong>
+開始前から「あっつ…」と連呼しテンション低め。<br>練習中盤、ミスが重なると態度に出やすくなり、ラケットを手に持ったまま気忙しげに歩き回る姿が複数回記録される。</p>
+  <p><strong>備考：</strong>「集中が切れているようだな。クールダウンするか？」という提案に対し、「まだやれるっス」とやや語気強めに反応。<br>俺の言い方にも問題があったかもしれない。最終的には冷水シャワー後に落ち着いた。</p>
+</div>
+
+<div class="mood-entry">
+  <h3 class="mood-date-title">2025/07/04（金）</h3>
+  <p><span class="mood-tag">気温：17℃</span><span class="mood-tag">湿度：58%</span><span class="mood-tag">睡眠：8h</span><span class="mood-tag">前夜食：ハヤシライス</span></p>
+  <p><strong>状態：</strong>
+朝からテンション高く、ランニング中に歌を口ずさむ姿が確認された。<br>午後のダブルス練習ではパートナー（柳）との連携もスムーズで、珍しく「今の、連携バッチリじゃね？」と自己評価を口にした。</p>
+  <p><strong>備考：</strong>「気温が下がると、なぜか機嫌が安定する傾向あり」という仮説を強化。</p>
+</div>
+
+<div class="mood-entry">
+  <h3 class="mood-date-title">2025/07/05（土）</h3>
+  <p><span class="mood-tag">気温：21℃</span><span class="mood-tag">湿度：70%</span><span class="mood-tag">睡眠：6h</span><span class="mood-tag">前夜食：ハヤシライス</span></p>
+  <p><strong>状態：</strong>
+練習序盤は平常通りだったが、弦一郎の指摘に対し不満げな反応を見せた後、急に無口になる。<br>その後の球出し練習では動きが硬く、声かけも極端に減少。</p>
+  <p><strong>備考：</strong>
+内面で整理しきれない感情があると黙る傾向がある。怒るよりも沈黙の方が注意が必要。<br>帰りがけにアイスを奢ってやると機嫌が戻った。</p>
+</div>
+
+<div class="mood-entry">
+  <h3 class="mood-date-title">2025/07/06（日）</h3>
+  <p><span class="mood-tag">気温：24℃</span><span class="mood-tag">湿度：69%</span><span class="mood-tag">睡眠：5.5h</span><span class="mood-tag">前夜食：トンテキ</span></p>
+  <p><strong>状態：</strong>
+朝からややぼんやりしており、ランニング中に1度コースを間違える。<br>練習では判断ミスが目立ち、いつものような鋭さに欠ける内容。<br>怒るというより、本人も何が原因か掴めず終始「なんかおかしい」とぼやいていた。</p>
+  <p><strong>備考：</strong>前夜食・睡眠の質が好調時と大きく異なる。無意識のパターン要素に注視すべき。</p>
+</div>
+
+<div class="mood-entry">
+  <h3 class="mood-date-title">2025/07/07（月）</h3>
+  <p><span class="mood-tag">気温：22℃</span><span class="mood-tag">湿度：60%</span><span class="mood-tag">睡眠：6h</span><span class="mood-tag">前夜食：クリームシチュー</span></p>
+  <p><strong>状態：</strong>
+表情・声量・フォーム全てにおいてバランスが取れており、安定したパフォーマンス。<br>練習試合では2セットを連取、プレー中の判断も的確だった。</p>
+  <p><strong>備考：</strong>この日をベンチマークに設定するべきだろう。それほどの充実ぶりだった。</p>
+</div>
+
+<div class="mood-entry">
+  <h3 class="mood-date-title">2025/07/08（火）</h3>
+  <p><span class="mood-tag">気温：29℃</span><span class="mood-tag">湿度：75%</span><span class="mood-tag">睡眠：3.5h</span><span class="mood-tag">前夜食：チョコアイス＋ポテトチップス</span></p>
+  <p><strong>状態：</strong>
+開始早々から口数が少なく、無表情。動きにも精彩を欠き、ミスが続出。<br>練習後半では突然怒声を上げ、ボールを強打してコート外に飛ばす。</p>
+  <p><strong>備考：</strong>
+赤目モードには至らなかったが、暴走一歩手前の兆候あり。帰宅後モニタリングを実施した。<br>話しながら確認したところ、単純な睡眠不足、栄養の偏った食事に加え、<br>大会を目前に控えて無意識のうちに神経が昂り自律神経に若干影響が出ているようだ。<br>期末試験の結果が芳しくなかったことも関係があるのだろう。通話しながらリラックスしたのか途中で眠ってしまった。</p>
+</div>
+
+<div class="mood-entry">
+  <h3 class="mood-date-title">2025/07/09（水）</h3>
+  <p><span class="mood-tag">気温：19℃</span><span class="mood-tag">湿度：55%</span><span class="mood-tag">睡眠：8h</span><span class="mood-tag">前夜食：親子丼</span></p>
+  <p><strong>状態：</strong>比較的安定。やや無口だったがプレーは丁寧。目立った感情起伏なし。</p>
+  <p><strong>備考：</strong>練習前と後に仁王と小声で談笑していたのが印象的。</p>
+</div>
+<div class="mood-entry">
+  <h3 class="mood-date-title">2025/07/10（木）</h3>
+  <p><span class="mood-tag">気温：22℃</span><span class="mood-tag">湿度：55%</span><span class="mood-tag">睡眠：6.0h</span><span class="mood-tag">前夜食：オムライス</span></p>
+<p><strong>状態：</strong>
+朝はやや興奮状態で、声量と動作に落ち着きが見られなかった。<br>練習メニューを早めに終わらせようとする傾向あり、集中度は一時的に乱れたが、後半はサーブ練習に没頭し徐々に安定。<br>通常時のフォームと「赤目モード」との境界がやや曖昧になっており、明日の試合における状態変化に要注意。</p>
+  <p><strong>備考：</strong>
+明日から関東大会に入る。「今日は調整メインにしておけ」と言われたにもかかわらず、自主的にダッシュ系メニューを追加。<br>夜のミーティング後に「まー楽勝っスよ」と発言していたが、語気は少し荒れていた。高揚が強めに出ている。</p>
+</div>
+  </details>
+  </details>
+  </div>
+
+<div class="section" id="growth-section">
+  <h2>■ 技術研究ログ</h2>
+<p style="font-size: 13px; color: #666;">観察記録と資料画像をもとに、技術的傾向と動作、影響範囲を分析・記述。</p>
+  <ul class="technique-list">
+    <li><a href="moves/splitstep.html">- スプリットステップ</a></li>
+    <li><a href="moves/knuckle.html">- ナックルサーブ</a></li>
+    <li><a href="moves/muga.html">- 無我の境地</a></li>
+    <li><a href="moves/traits.html">- 癖・兆候</a></li>
+  </ul>
+</div>
+  <div style="margin-top: 80px; text-align: right;">
+    <a href="private_note_renji.html" class="hidden-link" style="color: #fff; font-size: 12px; text-decoration: none;">No entry</a>
+  </div>
+    </div>
+  </div>
+</body>
+</html>

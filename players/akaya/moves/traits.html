@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>癖・兆候-切原赤也 | Log_yanagirenji</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+    .sidebar {
+      width: 220px;
+      background-color: #dcdcdc;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .sidebar h1 {
+      font-size: 16px;
+      margin-bottom: 5px;
+      color: #222;
+    }
+    .sidebar h2 {
+      font-size: 14px;
+      margin-bottom: 16px;
+      color: darkred;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      font-size: 14px;
+    }
+    .sidebar li {
+      margin-bottom: 8px;
+    }
+    .sidebar li.active {
+      font-weight: bold;
+      color: darkred;
+    }
+    .sidebar a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+    .main {
+      flex: 1;
+      padding: 40px;
+      overflow-y: auto;
+      background-color: #fff;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: darkred;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    .section h2 {
+      font-size: 18px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+    }
+    .file-label {
+      font-size: 13px;
+      color: #333;
+      font-weight: bold;
+      margin: 20px 0 8px;
+    }
+    .thumb-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+  justify-content: flex-start;
+      margin-top: 10px;
+    }
+    .thumb-gallery img {
+      width: 200px;
+      height: 120px;
+      object-fit: cover;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      cursor: pointer;
+    }
+    .thumb-gallery div {
+      width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    }
+    .thumb-gallery p {
+      font-size: 12px;
+      color: #555;
+      margin: 4px 0 0;
+      text-align: center;
+    }
+    .observation {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #fff;
+      border-left: 4px solid #aaa;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.7);
+    }
+    .modal-content {
+      margin: 10% auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 4px;
+      max-width: 600px;
+      text-align: center;
+    }
+    .modal-content img {
+      max-width: 100%;
+      height: auto;
+    }
+    .modal-content p {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #333;
+    }
+    .close {
+      float: right;
+      font-size: 24px;
+      cursor: pointer;
+      color: #999;
+    }
+    .close:hover {
+      color: #000;
+    }
+    details summary {
+      font-size: 12px;
+      color: #ccc;
+      font-weight: bold;
+      cursor: pointer;
+      display: inline-block;
+    }
+    details summary:hover {
+      text-decoration: underline;
+    }
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 30px;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h1>技術研究ログ</h1>
+      <h2>｜切原赤也</h2>
+      <ul>
+        <li><a href="splitstep.html">- スプリットステップ</a></li>
+    <li><a href="knuckle.html">- ナックルサーブ</a></li>
+        <li><a href="muga.html">- 無我の境地</a></li>
+        <li class="active">- 癖・兆候</li>
+        <li><a href="../index.html">[Player: Kirihara Akaya]</a></li>
+        <li><a href="../../../index.html">[TOP]</a></li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <h1>癖・兆候｜Observation Notes</h1>
+
+<div class="section">
+  <h2>無意識の仕草</h2>
+<p style="font-size: 13px; color: #666;">試合中などに見られる動きから、本人のコンディションを把握する。</p>
+<div class="table-wrapper">
+  <table style="border-collapse: collapse; width: 100%; font-size: 14px;">
+    <thead>
+      <tr style="background-color: #f0f0f0;">
+        <th style="padding: 8px; border-bottom: 2px solid #aaa; text-align: left;">仕草</th>
+        <th style="padding: 8px; border-bottom: 2px solid #aaa; text-align: left;">状況</th>
+        <th style="padding: 8px; border-bottom: 2px solid #aaa; text-align: left;">詳細</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #ccc;">唇をかむ</td>
+        <td style="padding: 8px; border-bottom: 1px solid #ccc;">練習中</td>
+        <td style="padding: 8px; border-bottom: 1px solid #ccc;">思い通りに動けない時に無意識で行う癖。集中状態に入る前段階としてよく見られる。</td>
+      </tr>
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #ccc;">靴のつま先を壁に当てて揺らす</td>
+        <td style="padding: 8px; border-bottom: 1px solid #ccc;">教室など</td>
+        <td style="padding: 8px; border-bottom: 1px solid #ccc;">エネルギーが有り余っているときや、退屈している時のサイン。</td>
+      </tr>
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #ccc;">ジャージの袖をめくる</td>
+        <td style="padding: 8px; border-bottom: 1px solid #ccc;">練習中</td>
+        <td style="padding: 8px; border-bottom: 1px solid #ccc;">汗の不快感より、集中時に手元を視界に入れやすくするための無意識的調整。</td>
+      </tr>
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #ccc;">指を1本ずつ強く鳴らす</td>
+        <td style="padding: 8px; border-bottom: 1px solid #ccc;">練習中</td>
+        <td style="padding: 8px; border-bottom: 1px solid #ccc;">本人は気合を入れているつもりだが、怪我前に頻発する傾向がある。</td>
+      </tr>
+      <tr>
+        <td style="padding: 8px; border-bottom: 1px solid #ccc;">対戦相手を睨みつける</td>
+        <td style="padding: 8px; border-bottom: 1px solid #ccc;">試合中</td>
+        <td style="padding: 8px; border-bottom: 1px solid #ccc;">緊張や不安が強いときに出やすい。赤目モードの反動で感情を抑えている可能性も。</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="section">
+  <h2>観察メモ</h2>
+<p style="font-size: 13px; color: #666;">兆候と思われるもの。分析前。</p>
+<details>
+    <summary style="font-size: 14px; font-weight: bold; color: darkred; cursor: pointer; margin: 10px 0;">
+      ▶︎ memo
+    </summary>
+    <div style="padding-top: 10px;">
+
+        <div class="observation">
+          <strong>[2025/05/21]</strong><br>
+          練習試合中、サーブ前に左手でユニフォームの袖を3回引っ張る動作を確認。意図的か無意識かは不明。<br>
+          サインプレーとの関連性は低いが、集中のトリガー動作としての可能性あり。
+        </div>
+
+        <div class="observation">
+          <strong>[2025/05/30]</strong><br>
+          爪を軽く噛む。ベンチでの集中時または神経が過敏になっている時の習慣になりつつある。<br>
+        </div>
+
+        <div class="observation">
+          <strong>[2025/06/04]</strong><br>
+          ダブルス練習時、ペアとのすれ違いざまに視線を合わせず下に落とす傾向。<br>緊張または感情の制御を試みている状態と推測。
+        </div>
+
+        <div class="observation">
+          <strong>[2025/06/12]</strong><br>
+          プレッシャーがかかっている時に右肩ではなく左肩を1回だけ回す癖を数回観測。<br>赤也自身も気づいていない。試合の重要局面でのみ確認される。
+        </div>
+
+        <div class="observation">
+          <strong>[2025/06/15]</strong><br>
+          他のプレイヤーが疲労時に支配側を優先して動かすのに対し、赤也は逆である可能性が高い。<br>意図なく非利き足から動くことで、興奮状態かどうかを判別できそうだ。
+        </div>
+
+        <div class="observation">
+          <strong>[2025/06/18]</strong><br>
+          緊張が高まると「鼻をかくふりだけ」して指先を鼻に近づける。おそらく実際にはかいていない。<br>「かく素振り」だけを2秒以内に完了する。赤也の疑似逃避動作か。
+        </div>
+
+        <div class="observation">
+          <strong>[2025/06/24]</strong><br>
+          家を出る直前、靴を履いたあとに右足のつま先を地面に2回だけ軽く鳴らす動作を毎朝している。<br>無意識のルーティンによって精神状態をリセットしているためか。
+        </div>
+
+        <div class="observation">
+          <strong>[2025/06/26]</strong><br>
+          瞬間的なストレスを感じた時、奥歯を噛みしめるが、そのタイミングで右目だけ数回まばたきする。<br>極めて短時間かつ不規則。本人も知らない心拍スイッチの可能性がある。
+        </div>
+
+        <div class="observation">
+          <strong>[2025/06/28]</strong><br>
+         着席時、無意識に右手で机か椅子の脚を小さく2回叩く動きが見られる。赤也なりの“ここにいていいか”の無意識確認動作か。
+        </div>
+
+        <div class="observation">
+          <strong>[2025/06/28]</strong><br>
+         鏡を見ながら顔を洗う際、なぜか毎回右頬を2回撫でる動作を加える。<br>赤也自身に自覚はないが、合宿中の宿舎にて3日間連続で確認。
+        </div>
+
+        <div class="observation">
+          <strong>[2025/06/28]</strong><br>
+         笑いながら独り言を言う。買い物や帰り道など、気分が良いときに頻発。内容はたいてい意味不明。
+        </div>
+    </div>
+  </details>
+</div>
+
+        <div class="file-label">📷 記録ファイル（全44枚）</div>
+        <div class="thumb-gallery">
+          <img src="../../../images/akaya/moves/traits/rikkai01842.jpg" alt="rikkai01842" onclick="openModal('../../../images/akaya/moves/traits/rikkai01842.jpg', 'リカバリーは素早く、瞬発力の高い走り込みを見せる。')">
+          <img src="../../../images/akaya/moves/traits/rikkai01823.jpg" alt="rikkai01823" onclick="openModal('../../../images/akaya/moves/traits/rikkai01823.jpg', '試合中は不適な顔を崩さない。')">
+          <img src="../../../images/akaya/moves/traits/rikkai01876.jpg" alt="rikkai01876" onclick="openModal('../../../images/akaya/moves/traits/rikkai01876.jpg', 'サーブ。動作は基本的に大きめ。')">
+          <img src="../../../images/akaya/moves/traits/rikkai01886.jpg" alt="rikkai01886" onclick="openModal('../../../images/akaya/moves/traits/rikkai01886.jpg', '跳躍力の高さが一本足でのスプリットステップを可能にしている。')">
+          <img src="../../../images/akaya/moves/traits/rikkai01905.jpg" alt="rikkai01905" onclick="openModal('../../../images/akaya/moves/traits/rikkai01905.jpg', '相手選手への挑発行為。')">
+          <img src="../../../images/akaya/moves/traits/rikkai01825.jpg" alt="rikkai01825" onclick="openModal('../../../images/akaya/moves/traits/rikkai01825.jpg', '相手校ベンチに向かっての挑発も多い。')">
+          <img src="../../../images/akaya/moves/traits/rikkai01913.jpg" alt="rikkai01913" onclick="openModal('../../../images/akaya/moves/traits/rikkai01913.jpg', '振り抜きは速い。')">
+          <img src="../../../images/akaya/moves/traits/rikkai02011.jpg" alt="rikkai02011" onclick="openModal('../../../images/akaya/moves/traits/rikkai02011.jpg', '踏み込みは少しだけ遅れる傾向。')">
+        </div>
+
+        <details>
+          <summary>未分類</summary>
+          <div id="auth-box">
+            <p style="margin-top: 10px;">閲覧には認証が必要です。</p>
+            <input type="text" id="hidden-id" placeholder="ID"><br>
+            <input type="password" id="hidden-pw" placeholder="パスワード"><br>
+            <button onclick="checkHiddenAuth()">認証</button>
+            <p id="auth-error" style="color: red; font-size: 12px;"></p>
+          </div>
+
+          <div id="hidden-content" class="thumb-gallery" style="display: none; margin-top: 15px;">
+              <img src="../../../images/akaya/moves/traits/rikkai01503.jpg" alt="rikkai01503" onclick="openModal('../../../images/akaya/moves/traits/rikkai01503.jpg', 'おそらくナックルサーブ時の握り込み、手に着目。')">
+              <img src="../../../images/akaya/moves/traits/rikkai01931.jpg" alt="rikkai01931" onclick="openModal('../../../images/akaya/moves/traits/rikkai01931.jpg', 'ボールを握り込む動作を確認。テンションアップの前触れか。')">
+              <img src="../../../images/akaya/moves/traits/rikkai02007.jpg" alt="rikkai02007" onclick="openModal('../../../images/akaya/moves/traits/rikkai02007.jpg', 'トス動作。')">
+              <img src="../../../images/akaya/moves/traits/rikkai02272.jpg" alt="rikkai02272" onclick="openModal('../../../images/akaya/moves/traits/rikkai02272.jpg', '相手への暴言。審判に阻止される。')">
+              <img src="../../../images/akaya/moves/traits/rikkai00527.jpg" alt="rikkai00527" onclick="openModal('../../../images/akaya/moves/traits/rikkai00527.jpg', '試合展開が思い通りにいかなかった瞬間。顔を歪ませる。')">
+              <img src="../../../images/akaya/moves/traits/rikkai00573.jpg" alt="rikkai00573" onclick="openModal('../../../images/akaya/moves/traits/rikkai00573.jpg', '弦一郎からの制裁時。噛みしめるような表情。')">
+              <img src="../../../images/akaya/moves/traits/rikkai00932.jpg" alt="rikkai00932" onclick="openModal('../../../images/akaya/moves/traits/rikkai00932.jpg', '試合中、ベンチでは丸井やジャッカルに話しかけることが多い。')">
+              <img src="../../../images/akaya/moves/traits/rikkai01549.jpg" alt="rikkai01549" onclick="openModal('../../../images/akaya/moves/traits/rikkai01549.jpg', '気を抜くと行儀が悪くなる傾向。')">
+              <img src="../../../images/akaya/moves/traits/rikkai01665.jpg" alt="rikkai01665" onclick="openModal('../../../images/akaya/moves/traits/rikkai01665.jpg', '相手側に聞こえる音量での煽り、野次も多い。')">
+              <img src="../../../images/akaya/moves/traits/rikkai01805.jpg" alt="rikkai01805" onclick="openModal('../../../images/akaya/moves/traits/rikkai01805.jpg', '暗い表情。赤也にしては珍しい。')">
+              <img src="../../../images/akaya/moves/traits/rikkai01808.jpg" alt="rikkai01808" onclick="openModal('../../../images/akaya/moves/traits/rikkai01808.jpg', '相手を睨みつける行為（1）。')">
+              <img src="../../../images/akaya/moves/traits/rikkai01809.jpg" alt="rikkai01809" onclick="openModal('../../../images/akaya/moves/traits/rikkai01809.jpg', '相手を睨みつける行為（2）。片頬で笑みも浮かべる。')">
+              <img src="../../../images/akaya/moves/traits/rikkai01980.jpg" alt="rikkai01980" onclick="openModal('../../../images/akaya/moves/traits/rikkai01980.jpg', '自身で設定した試合時間制限を超えてしまった時の反応。悔しげな口元。')">
+              <img src="../../../images/akaya/moves/traits/rikkai01991.jpg" alt="rikkai01991" onclick="openModal('../../../images/akaya/moves/traits/rikkai01991.jpg', '部内練習試合で弦一郎との試合時。')">
+              <img src="../../../images/akaya/moves/traits/rikkai02069.jpg" alt="rikkai02069" onclick="openModal('../../../images/akaya/moves/traits/rikkai02069.jpg', 'オフの夜に練習する様子を見かける。壁打ちをしていたようだ。')">
+              <img src="../../../images/akaya/moves/traits/rikkai02144.jpg" alt="rikkai02144" onclick="openModal('../../../images/akaya/moves/traits/rikkai02144.jpg', '他校との練習試合時、ベンチで一瞬見せた不安の顔。その日は終日落ち着きがなかった。大会も近いからだろうか。')">
+              <img src="../../../images/akaya/moves/traits/rikkai00145.jpg" alt="rikkai00145" onclick="openModal('../../../images/akaya/moves/traits/rikkai00145.jpg', 'オフの日はジャッカル、丸井、場合によっては仁王などと帰宅することが多いようだ。基本的には寄り道している。')">
+              <img src="../../../images/akaya/moves/traits/rikkai00151.jpg" alt="rikkai00151" onclick="openModal('../../../images/akaya/moves/traits/rikkai00151.jpg', '特にジャッカル、丸井といる時は表情が柔らかい。リラックスしている様子。赤也の物怖じしない性格もあるが、部を超えた先輩後輩としての関係を築いているようだ。')">
+              <img src="../../../images/akaya/moves/traits/rikkai00533.jpg" alt="rikkai00533" onclick="openModal('../../../images/akaya/moves/traits/rikkai00533.jpg', '試合前の武者震いらしき様子。赤也は基本的にはテニスを楽しむ傾向にある。常により強い相手との試合を望んでいる。')">
+              <img src="../../../images/akaya/moves/traits/rikkai00590.jpg" alt="rikkai00590" onclick="openModal('../../../images/akaya/moves/traits/rikkai00590.jpg', '弦一郎にグラウンド30周を命じられた時。部活の時間も間も無く終わりという時だったため、不満げな表情。意外にもこういった状況でサボることはあまりない。')">
+              <img src="../../../images/akaya/moves/traits/rikkai00168.jpg" alt="rikkai00168" onclick="openModal('../../../images/akaya/moves/traits/rikkai00168.jpg', '部内練習試合時。試しに丸井と組ませてみたが、あまり相性は良くない。俺と組んでいる時とは違い、動き方に悩む様子が見られた。普段の関係値を常にそのまま試合に持ち込めるわけではないということだろう。')">
+              <img src="../../../images/akaya/moves/traits/rikkai01168.jpg" alt="rikkai01168" onclick="openModal('../../../images/akaya/moves/traits/rikkai01168.jpg', '仁王と柳生が入れ替わりの練習をしているところに野次馬に行く場面。自身の練習を放り出しているという点ではあまり感心しないが、たまたま弦一郎も見ていなかったのでたまにはいいだろう。赤也は各レギュラー陣によく絡みに行く。')">
+              <img src="../../../images/akaya/moves/traits/rikkai01459.jpg" alt="rikkai01459" onclick="openModal('../../../images/akaya/moves/traits/rikkai01459.jpg', '部活からの帰り際、柳生の蘊蓄話に飽きている様子。この2人は特に相性がいいとは言えないが、赤也の後輩気質と柳生の面倒みたがりな性格で一定の関係を築いているらしい。まれに一緒にいる場面を見かける。')">
+              <img src="../../../images/akaya/moves/traits/rikkai01511.jpg" alt="rikkai01511" onclick="openModal('../../../images/akaya/moves/traits/rikkai01511.jpg', 'ベンチでは無駄口も多いが、試合からは基本的に目を離さない。向上心の高い赤也は、相手チーム、自チームに限らず無意識のうちに観察している節がある。強い選手のプレーを見ることで意欲向上にもつながっているのかもしれない。')">
+              <img src="../../../images/akaya/moves/traits/rikkai01686.jpg" alt="rikkai01686" onclick="openModal('../../../images/akaya/moves/traits/rikkai01686.jpg', '試合展開を見守るシーン。眼差しが真剣さを帯びている。集中力が高まっている証拠だ。')">
+              <img src="../../../images/akaya/moves/traits/rikkai01911.jpg" alt="rikkai01911" onclick="openModal('../../../images/akaya/moves/traits/rikkai01911.jpg', '相手を挑発する際、舌を口の中で回す癖がある。何かを言いあぐねている時もこの癖が出ているようだ。先日中間試験の点数を確認した際にこの仕草を見せた。')">
+              <img src="../../../images/akaya/moves/traits/rikkai01915.jpg" alt="rikkai01915" onclick="openModal('../../../images/akaya/moves/traits/rikkai01915.jpg', '練習中。地道な反復練習時は飽きてふざけがちだ。しばし黙って見ていたが、このあとすぐに弦一郎に見つかって殴られていた。')">
+              <img src="../../../images/akaya/moves/traits/rikkai02341.jpg" alt="rikkai02341" onclick="openModal('../../../images/akaya/moves/traits/rikkai02341.jpg', '試合中は比較的よく見ているが、終わった後や始まる前の整列時などはフラフラしていることが多い。ジャッカルや俺がよく面倒を見ている。')">
+              <img src="../../../images/akaya/moves/traits/rikkai01087.jpg" alt="rikkai01087" onclick="openModal('../../../images/akaya/moves/traits/rikkai01087.jpg', '仁王の試合中。相手があっさりイリュージョンに引っかかったのでニヤついている。')">
+              <img src="../../../images/akaya/moves/traits/rikkai01091.jpg" alt="rikkai01091" onclick="openModal('../../../images/akaya/moves/traits/rikkai01091.jpg', '同右。赤也は自分の得点時もそうだが、部員の試合中も優勢だと嬉しそうだ。')">
+              <img src="../../../images/akaya/moves/traits/rikkai00594.jpg" alt="rikkai00594" onclick="openModal('../../../images/akaya/moves/traits/rikkai00594.jpg', 'ふとした時に1人、常勝の構えを見せていた。関東大会も近い。三連覇を目指しているのは赤也も同じということか。')">
+              <img src="../../../images/akaya/moves/traits/rikkai02135.jpg" alt="rikkai02135" onclick="openModal('../../../images/akaya/moves/traits/rikkai02135.jpg', '判断できない。詳細保留。')">
+              <img src="../../../images/akaya/moves/traits/rikkai02212.jpg" alt="rikkai02212" onclick="openModal('../../../images/akaya/moves/traits/rikkai02212.jpg', '判断できない。詳細保留。')">
+              <img src="../../../images/akaya/moves/traits/rikkai02215.jpg" alt="rikkai02215" onclick="openModal('../../../images/akaya/moves/traits/rikkai02215.jpg', '判断できない。詳細保留。')">
+              <img src="../../../images/akaya/moves/traits/rikkai01794.jpg" alt="rikkai01794" onclick="openModal('../../../images/akaya/moves/traits/rikkai01794.jpg', '判断できない。詳細保留。')">
+              <img src="../../../images/akaya/moves/traits/rikkai01796.jpg" alt="rikkai01796" onclick="openModal('../../../images/akaya/moves/traits/rikkai01796.jpg', '判断できない。詳細保留。')">
+              <img src="../../../images/akaya/moves/traits/" alt="404 Not Found" onclick="openModal('../../../images/akaya/moves/traits/', 'この写真は別の場所へ移動されました（renji）')">
+          </div>
+        </details>
+    </div>
+  </div>
+</div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">×</span>
+      <img id="modal-img" src="" alt="拡大画像">
+      <p id="modal-caption"></p>
+    </div>
+  </div>
+
+  <script>
+    function openModal(src, caption) {
+      document.getElementById('modal-img').src = src;
+      document.getElementById('modal-caption').textContent = caption;
+      document.getElementById('modal').style.display = 'block';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+
+    function checkHiddenAuth() {
+      const id = document.getElementById('hidden-id').value;
+      const pw = document.getElementById('hidden-pw').value;
+      const error = document.getElementById('auth-error');
+      const hiddenContent = document.getElementById('hidden-content');
+
+      if (id === 'renji' && pw === 'meikyoshisui') {
+        hiddenContent.style.display = 'block';
+        document.getElementById('auth-box').style.display = 'none';
+        error.textContent = '';
+      } else {
+        error.textContent = 'IDまたはパスワードが違います。';
+      }
+    }
+  </script>
+</body>
+</html>

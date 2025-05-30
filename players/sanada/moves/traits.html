@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>癖・兆候-真田弦一郎 | Log_yanagirenji</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+    .sidebar {
+      width: 220px;
+      background-color: #dcdcdc;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .sidebar h1 {
+      font-size: 16px;
+      margin-bottom: 5px;
+      color: #222;
+    }
+    .sidebar h2 {
+      font-size: 14px;
+      margin-bottom: 16px;
+      color: darkred;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      font-size: 14px;
+    }
+    .sidebar li {
+      margin-bottom: 8px;
+    }
+    .sidebar li.active {
+      font-weight: bold;
+      color: darkred;
+    }
+    .sidebar a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+    .main {
+      flex: 1;
+      padding: 40px;
+      overflow-y: auto;
+      background-color: #fff;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: darkred;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    .section h2 {
+      font-size: 18px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+    }
+    .observation {
+      padding: 10px;
+      background-color: #fff;
+      border-left: 4px solid #aaa;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .file-label {
+      font-size: 13px;
+      color: #333;
+      font-weight: bold;
+      margin: 20px 0 8px;
+    }
+    .thumb-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .thumb-gallery img {
+      width: 200px;
+      height: 120px;
+      object-fit: cover;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      cursor: pointer;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.7);
+    }
+    .modal-content {
+      margin: 10% auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 4px;
+      max-width: 600px;
+      text-align: center;
+    }
+    .modal-content img {
+      max-width: 100%;
+      height: auto;
+    }
+    .modal-content p {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #333;
+    }
+    .close {
+      float: right;
+      font-size: 24px;
+      cursor: pointer;
+      color: #999;
+    }
+    .close:hover {
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h1>技術研究ログ</h1>
+      <h2>｜真田弦一郎</h2>
+      <ul>
+        <li><a href="furinkazan.html">- 風林火山</a></li>
+        <li><a href="muga.html">- 無我の境地</a></li>
+        <li class="active">- 癖・兆候</li>
+        <li><a href="../index.html">[Player: Sanada Genichirou]</a></li>
+        <li><a href="../../../index.html">[TOP]</a></li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <h1>癖・兆候｜Observation Notes</h1>
+
+      <div class="section">
+        <h2>観察概要</h2>
+        <div class="observation">
+          弦一郎はその厳格な性格が試合中にも徹底されており、一打一打に揺るぎない覚悟が宿る。<br>
+プレーでは一切の妥協を許さない。無駄を削ぎ落とした力強い打球、理詰めの配球、そして鋼のメンタルで貫かれている。<br>
+相手に情けをかけることなく、勝利のために必要な判断を冷静に下せるという点で、相手のみならず自チームのレギュラー陣も圧倒する。
+        </div>
+      </div>
+
+      <div class="file-label">📷 記録ファイル（全3枚）</div>
+      <div class="thumb-gallery">
+        <img src="../../../images/sanada/moves/traits/rikkai00867.jpg" alt="rikkai00867" onclick="openModal('../../../images/sanada/moves/traits/rikkai00867.jpg', '試合前に目を閉じて深呼吸する様子')">
+        <img src="../../../images/sanada/moves/traits/rikkai02163.jpg" alt="rikkai02163" onclick="openModal('../../../images/sanada/moves/traits/rikkai02163.jpg', 'サーブ前、無言のまま静止する時間が長い')">
+        <img src="../../../images/sanada/moves/traits/rikkai02137.jpg" alt="rikkai02137" onclick="openModal('../../../images/sanada/moves/traits/rikkai02137.jpg', '目線をあえて外すことで冷静さを保とうとする動作')">
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">×</span>
+      <img id="modal-img" src="" alt="拡大画像">
+      <p id="modal-caption"></p>
+    </div>
+  </div>
+
+  <script>
+    function openModal(src, caption) {
+      document.getElementById('modal-img').src = src;
+      document.getElementById('modal-caption').textContent = caption;
+      document.getElementById('modal').style.display = 'block';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

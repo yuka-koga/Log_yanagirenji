@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ごめんね-BBS | Log_yanagirenji</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 20px;
+      color: darkred;
+      margin-bottom: 20px;
+    }
+    .thread {
+      max-width: 800px;
+      margin: auto;
+    }
+    .post {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 12px 16px;
+      margin-bottom: 15px;
+    }
+    .post .meta {
+      font-size: 12px;
+      color: #777;
+      margin-bottom: 8px;
+    }
+    .post .reply {
+      margin-left: 20px;
+      border-left: 3px solid #ccc;
+      padding-left: 10px;
+      margin-top: 10px;
+    }
+    .post .deleted {
+      background-color: #222;
+      color: #222;
+      user-select: none;
+    }
+    .post a {
+      color: darkred;
+      font-size: 14px;
+    }
+    form {
+      background-color: #fff;
+      padding: 16px;
+      border: 1px solid #ccc;
+    }
+    form input, form textarea {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 8px;
+      font-size: 14px;
+    }
+    form button {
+      padding: 8px 16px;
+      background-color: darkred;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #a00;
+    }
+  </style>
+</head>
+<body>
+  <div class="thread">
+    <h1>ごめんね</h1>
+
+    <div class="post">
+      <div class="meta">seiichi｜06/27 18:42</div>
+      <div>見ちゃった</div>
+    </div>
+
+    <div class="post reply">
+      <div class="meta">renji｜06/27 21:09</div>
+      <div>そうか。</div>
+    </div>
+
+    <div class="post reply">
+      <div class="meta">renji｜06/27 21:12</div>
+      <div>いや気にするな。俺が誰でもアクセスできるようにしてしまっていたからだな。</div>
+    </div>
+
+    <div class="post reply">
+      <div class="meta">renji｜06/27 21:20</div>
+      <div>さっき鍵をかけておいた。気を使わせてしまってすまなかった。それにしてもよく見つけたな(笑)。</div>
+    </div>
+
+    <div class="post reply">
+      <div class="meta">seiichi｜06/27 22:11</div>
+      <div>たまたまね笑</div>
+    </div>
+
+    <div class="post reply">
+      <div class="meta">seiichi｜06/27 22:46</div>
+      <div>蓮二大丈夫？</div>
+    </div>
+
+    <div class="post reply">
+      <div class="meta">renji｜06/27 22:49</div>
+      <div>関東も近いからな。少し前のめりになりすぎているのかもしれない。</div>
+    </div>
+
+    <div class="post reply">
+      <div class="meta">seiichi｜06/27 22:53</div>
+      <div>あまり思い詰めると良くないよ 関東大会まではもう改めて話すこともないし、一旦口頭での情報共有に戻そうか</div>
+    </div>
+
+    <div class="post reply">
+      <div class="meta">renji｜06/27 22:57</div>
+      <div>そうだな。その方がいいかもしれない。</div>
+    </div>
+
+    <form>
+      <input type="text" placeholder="名前（任意）">
+      <textarea rows="4" placeholder="投稿内容を入力"></textarea>
+      <button type="submit">投稿する</button>
+    </form>
+  </div>
+</body>
+</html>

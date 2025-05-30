@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ポジティブ・ディフェンス-ジャッカル桑原 | Log_yanagirenji</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+    .sidebar {
+      width: 220px;
+      background-color: #dcdcdc;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .sidebar h1 {
+      font-size: 16px;
+      margin-bottom: 5px;
+      color: #222;
+    }
+    .sidebar h2 {
+      font-size: 14px;
+      margin-bottom: 16px;
+      color: darkred;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      font-size: 14px;
+    }
+    .sidebar li {
+      margin-bottom: 8px;
+    }
+    .sidebar li.active {
+      font-weight: bold;
+      color: darkred;
+    }
+    .sidebar a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+    .main {
+      flex: 1;
+      padding: 40px;
+      background-color: #fff;
+      overflow-y: auto;
+    }
+    h1 {
+      font-size: 24px;
+      color: darkred;
+      margin-bottom: 20px;
+    }
+    .description {
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    .observation-log,
+    .evaluation {
+      margin-bottom: 30px;
+    }
+    .observation-log h2,
+    .evaluation h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 4px;
+    }
+    .observation-log ul,
+    .evaluation ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .observation-log li,
+    .evaluation li {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+    .thumb-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .thumb-gallery img {
+      width: 200px;
+      height: auto;
+      cursor: pointer;
+      border: 1px solid #aaa;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    .modal-content {
+      position: relative;
+      margin: 10% auto;
+      padding: 20px;
+      background: #fff;
+      width: 90%;
+      max-width: 600px;
+    }
+    .modal-content img {
+      width: 100%;
+    }
+    .modal-content p {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h1>技術研究ログ</h1>
+      <h2>｜ジャッカル桑原</h2>
+      <ul>
+        <li class="active">- ポジティブ・ディフェンス</li>
+    <li><a href="traits.html">- 癖・兆候</a></li>
+        <li><a href="../index.html">[Player: Jackal Kuwahara]</a></li>
+        <li><a href="../../../index.html">[TOP]</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <h1>ポジティブ・ディフェンス｜Observation Notes</h1>
+      <div class="description">
+        <p style="font-size: 13px; color: #666;">
+          ジャッカルの代名詞とも言える守備的ムーブ。<br>
+          通常であれば前衛が対応するボールにも後衛から積極的に飛び込む姿勢が特徴。<br>
+          単なるカバーリングに留まらず、常に期待役割以上の得点阻止力を見せ、丸井の士気にも影響を与えている。
+        </p>
+      </div>
+
+      <div class="evaluation">
+        <h2>技の評価</h2>
+        <p style="font-size: 13px; color: #666;">
+          徹底的に基礎フォーメーションを守ることと献身的な行動力が生きる技であり、試合展開の乱れを整える効果がある。<br>
+          体力勝負に持ち込まれた場合も粘り勝つだけの体力、精神力が必要となる。<br>
+          ダブルスにおける信頼度が問われる点には注意。
+        </p>
+        <ul>
+          <li>守備範囲：◎</li>
+          <li>連携度　：◎</li>
+          <li>判断力　：◯</li>
+          <li>持久力　：◎</li>
+        </ul>
+      </div>
+
+      <div style="font-size: 13px; color: darkred; font-weight: bold; margin: 20px 0 8px;">
+        ▶ 観察記録ファイル（全3枚）
+      </div>
+
+      <div class="thumb-gallery">
+        <img src="../../../images/jackal/moves/positivedefense/rikkai00677.jpg" alt="rikkai00677" onclick="openModal(this.src, '素早い踏み込みでコート際のボールも拾う。')">
+        <img src="../../../images/jackal/moves/positivedefense/rikkai00870.jpg" alt="rikkai00870" onclick="openModal(this.src, '“四つの肺を持つ”と言われるだけあり、走り回っても余裕の顔を見せる。')">
+        <img src="../../../images/jackal/moves/positivedefense/rikkai00924.jpg" alt="rikkai00924" onclick="openModal(this.src, '実は脚力も高い。上下左右すべての範囲をカバーする。')">
+      </div>
+
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">×</span>
+          <img id="modal-img" src="" alt="拡大画像">
+          <p id="modal-caption"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openModal(src, caption) {
+      document.getElementById('modal-img').src = src;
+      document.getElementById('modal-caption').textContent = caption;
+      document.getElementById('modal').style.display = 'block';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

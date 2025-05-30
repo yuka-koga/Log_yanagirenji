@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>癖・兆候-丸井ブン太 | Log_yanagirenji</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+    .sidebar {
+      width: 220px;
+      background-color: #dcdcdc;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .sidebar h1 {
+      font-size: 16px;
+      margin-bottom: 5px;
+      color: #222;
+    }
+    .sidebar h2 {
+      font-size: 14px;
+      margin-bottom: 16px;
+      color: darkred;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      font-size: 14px;
+    }
+    .sidebar li {
+      margin-bottom: 8px;
+    }
+    .sidebar li.active {
+      font-weight: bold;
+      color: darkred;
+    }
+    .sidebar a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+    .main {
+      flex: 1;
+      padding: 40px;
+      overflow-y: auto;
+      background-color: #fff;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: darkred;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    .section h2 {
+      font-size: 18px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+    }
+    .observation {
+      font-size: 14px;
+      line-height: 1.6;
+      padding: 10px;
+      background-color: #fff;
+      border-left: 4px solid #aaa;
+    }
+    .file-label {
+      font-size: 13px;
+      font-weight: bold;
+      color: #333;
+      margin: 20px 0 8px;
+    }
+    .thumb-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .thumb-gallery img {
+      width: 200px;
+      height: 120px;
+      object-fit: cover;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      cursor: pointer;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.7);
+    }
+    .modal-content {
+      margin: 10% auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 4px;
+      max-width: 600px;
+      text-align: center;
+    }
+    .modal-content img {
+      max-width: 100%;
+      height: auto;
+    }
+    .modal-content p {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #333;
+    }
+    .close {
+      float: right;
+      font-size: 24px;
+      cursor: pointer;
+      color: #999;
+    }
+    .close:hover {
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h1>技術研究ログ</h1>
+      <h2>｜丸井ブン太</h2>
+      <ul>
+          <li><a href="tettyu.html">- 鉄柱当て</a></li>
+        <li><a href="tsunawatari.html">- 綱渡り</a></li>
+        <li class="active">- 癖・兆候</li>
+        <li><a href="../index.html">[Player: Marui Bunta]</a></li>
+        <li><a href="../../../index.html">[TOP]</a></li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <h1>癖・兆候｜Observation Notes</h1>
+
+      <div class="section">
+        <h2>観察メモ</h2>
+        <div class="observation">
+          普段の軽快な振る舞いがそのまま試合態度にも表れている。ゲームが緊迫する場面でも基本的に動じず、基本に忠実なプレーを見せる。<br>
+          技で“魅せる”ことによって、相手を翻弄するのも得意。勝負所でも判断を誤らない冷静さも併せ持つ。<br>
+          シングルスでも十分通用するが、ジャッカルと組ませることで高いシナジーを生み出す。
+        </div>
+      </div>
+
+      <div class="file-label">📷 記録ファイル（全3枚）</div>
+      <div class="thumb-gallery">
+        <img src="../../../images/marui/moves/traits/rikkai00657.jpg" alt="rikkai00657" onclick="openModal('../../../images/marui/moves/traits/rikkai00657.jpg', 'ネット前の駆け引き。そこまで挑発的ではなく、自分が楽しんでいるため自然と出る動作が多い。')">
+        <img src="../../../images/marui/moves/traits/rikkai00914.jpg" alt="rikkai00914" onclick="openModal('../../../images/marui/moves/traits/rikkai00914.jpg', '基本のフォーメーションを徹底して崩さないプレースタイル。')">
+        <img src="../../../images/marui/moves/traits/rikkai02495.jpg" alt="rikkai02495" onclick="openModal('../../../images/marui/moves/traits/rikkai02495.jpg', 'ジャッカルとの相性がいいのは普段の関係値だけでなく、攻守を分けやすい点にも要因がある。')">
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">×</span>
+      <img id="modal-img" src="" alt="拡大画像">
+      <p id="modal-caption"></p>
+    </div>
+  </div>
+
+  <script>
+    function openModal(src, caption) {
+      document.getElementById('modal-img').src = src;
+      document.getElementById('modal-caption').textContent = caption;
+      document.getElementById('modal').style.display = 'block';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

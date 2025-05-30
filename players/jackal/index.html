@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ジャッカル桑原-Player | Log_yanagirenji</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+    .sidebar {
+      width: 250px;
+      background-color: #dcdcdc;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .sidebar h1 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li {
+      margin-bottom: 10px;
+    }
+    .sidebar li.active {
+      font-weight: bold;
+      color: darkred;
+    }
+    .sidebar a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+    .main {
+      flex: 1;
+      background-color: #ffffff;
+      padding: 40px;
+      overflow-y: scroll;
+      position: relative;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    .section h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+    .section p {
+      white-space: pre-wrap;
+      line-height: 1.6;
+    }
+    .profile-box::before {
+      content: "🗂 Profile";
+      display: block;
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: darkred;
+    }
+    .profile-box {
+      background-color: #efefef;
+      border: 1px solid #bbb;
+      padding: 12px 16px;
+      font-size: 13px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    .toggle-content {
+      display: none;
+    }
+    .toggle-header .arrow {
+      margin-right: 6px;
+    }
+    .toggle-header {
+      cursor: pointer;
+    }
+    .comment-box {
+      margin: 10px 0 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      background-color: #f9f9f9;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .comment-toggle {
+      font-size: 13px;
+      font-weight: bold;
+      color: darkred;
+      cursor: pointer;
+      margin-bottom: 6px;
+    }
+    .comment-toggle:hover {
+      text-decoration: underline;
+    }
+    .comment-list {
+      margin: 0;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+    }
+    .technique-list {
+      list-style: none;
+      padding-left: 0;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .technique-list li {
+      margin: 6px 0;
+    }
+    .technique-list a {
+      color: darkred;
+      text-decoration: none;
+    }
+    .technique-list a:hover {
+      text-decoration: underline;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h1>Player</h1>
+      <ul>
+        <li><a href="../yukimura/index.html">- 幸村精市</a></li>
+        <li><a href="../sanada/index.html">- 真田弦一郎</a></li>
+        <li><a href="../marui/index.html">- 丸井ブン太</a></li>
+        <li class="active">- ジャッカル桑原 ★</li>
+        <li><a href="../niou/index.html">- 仁王雅治</a></li>
+        <li><a href="../yagyu/index.html">- 柳生比呂士</a></li>
+        <li><a href="../akaya/index.html">- 切原赤也</a></li>
+        <li><a href="../yanagi/index.html">- 柳蓮二</a></li>
+        <li><a href="../../index.html">[TOP]</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <h2>【Player: Jackal Kuwahara｜ジャッカル桑原】</h2>
+      <div class="profile-box">
+  <div style="display: flex; align-items: flex-start; gap: 20px;">
+    <img src="../../images/jackal/rikkai00709.jpg" alt="ジャッカルプロフィール写真" style="width: 150px; height: auto; border: 1px solid #bbb;" />
+
+    <div>
+        <p><strong>身長：</strong>173cm　<strong>体重：</strong>63kg　<strong>利き腕：</strong>右</p>
+        <p><strong>足のサイズ：</strong>27.0cm　<strong>視力：</strong>右1.2 左1.2　<strong>血圧：</strong>高120 低80</p>
+        <p><strong>プレイスタイル：</strong>ディフェンシブ・ベースライナー</p>
+        <p><strong>メーカー：</strong><br>
+          シューズ：adidas / Adizero Ubersonic<br>
+          ラケット：HEAD / Radical MP
+        </p>
+        <p><strong>総合評価：</strong><br>
+          スピード 3 / パワー 2 / スタミナ 5 / メンタル 3.5 / テクニック 3 / 合計 16.5
+        </p>
+      </div>
+  </div>
+</div>
+
+      <div class="section" id="growth-section">
+        <h2>■ 技術研究ログ</h2>
+<p style="font-size: 13px; color: #666;">観察記録と資料画像をもとに、技術的傾向と動作、影響範囲を分析・記述。</p>
+        <ul class="technique-list">
+          <li><a href="moves/positivedefense.html">- ポジティブ・ディフェンス</a></li>
+          <li><a href="moves/traits.html">- 癖・兆候</a></li>
+        </ul>
+      </div>
+</body>
+</html>

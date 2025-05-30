@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>癖・兆候-柳生比呂士 | Log_yanagirenji</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+    .sidebar {
+      width: 220px;
+      background-color: #dcdcdc;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .sidebar h1 {
+      font-size: 16px;
+      margin-bottom: 5px;
+      color: #222;
+    }
+    .sidebar h2 {
+      font-size: 14px;
+      margin-bottom: 16px;
+      color: darkred;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      font-size: 14px;
+    }
+    .sidebar li {
+      margin-bottom: 8px;
+    }
+    .sidebar li.active {
+      font-weight: bold;
+      color: darkred;
+    }
+    .sidebar a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+    .main {
+      flex: 1;
+      padding: 40px;
+      overflow-y: auto;
+      background-color: #fff;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: darkred;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    .section h2 {
+      font-size: 18px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+    }
+    .observation {
+      font-size: 14px;
+      line-height: 1.6;
+      padding: 10px;
+      background-color: #fff;
+      border-left: 4px solid #aaa;
+    }
+    .file-label {
+      font-size: 13px;
+      font-weight: bold;
+      color: #333;
+      margin: 20px 0 8px;
+    }
+    .thumb-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .thumb-gallery img {
+      width: 200px;
+      height: 120px;
+      object-fit: cover;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      cursor: pointer;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.7);
+    }
+    .modal-content {
+      margin: 10% auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 4px;
+      max-width: 600px;
+      text-align: center;
+    }
+    .modal-content img {
+      max-width: 100%;
+      height: auto;
+    }
+    .modal-content p {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #333;
+    }
+    .close {
+      float: right;
+      font-size: 24px;
+      cursor: pointer;
+      color: #999;
+    }
+    .close:hover {
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h1>技術研究ログ</h1>
+      <h2>｜柳生比呂士</h2>
+      <ul>
+        <li><a href="laserbeam.html">- レーザービーム</a></li>
+        <li class="active">- 癖・兆候</li>
+        <li><a href="../index.html">[Player: Yagyu Hiroshi]</a></li>
+        <li><a href="../../../index.html">[TOP]</a></li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <h1>癖・兆候｜Observation Notes</h1>
+
+      <div class="section">
+        <h2>観察メモ</h2>
+        <div class="observation">
+          静かな態度に反して、勝負所では一瞬だけ顎を引き、左手の指を軽く揃える仕草が見られる。<br>
+          柳はこの無意識的な仕草を「集中の兆候」と捉えているようだが、本人は一切自覚していない。
+        </div>
+        <h2>イリュージョン（入れ替わり）について</h2>
+        <div class="observation">
+          柳生は現在、仁王と組んで入れ替わり戦術を試している。<br>
+          関東大会用の作戦のため外部との練習試合で試せないのがネックではあるが、身内から見ても変装の精度は高い。<br>
+骨格や顔の作りがかなり似ているようだ。性格や普段のスタイルが正反対であることもこの作戦に幸いするだろう。<br>
+大会で通用するレベルかどうかはまだ最終確認が必要だが、仁王の性格上、もうしばらくで仕上げてくるだろう。
+        </div>
+      </div>
+
+      <div class="file-label">📷 記録ファイル（全5枚）</div>
+      <div class="thumb-gallery">
+        <img src="../../../images/yagyu/moves/traits/rikkai01386.jpg" alt="rikkai01386" onclick="openModal('../../../images/yagyu/moves/traits/rikkai01386.jpg', '口調や態度は丁寧だが強く鋭い。プレースタイルにもそれが表れている。美学に反することには特に厳しい一面を見せる。')">
+        <img src="../../../images/yagyu/moves/traits/rikkai02244.jpg" alt="rikkai02244" onclick="openModal('../../../images/yagyu/moves/traits/rikkai02244.jpg', '紳士的振る舞いを意識しているが、時折危うげな様子を見せる。')">
+        <img src="../../../images/yagyu/moves/traits/rikkai01013.jpg" alt="rikkai01013" onclick="openModal('../../../images/yagyu/moves/traits/rikkai01013.jpg', '仁王とのダブルス時。仁王が相手選手へのラフプレーを実行していても止めない。むしろ勝利のためには加担する姿勢すら見せる。')">
+        <img src="../../../images/yagyu/moves/traits/rikkai01136.jpg" alt="rikkai01136" onclick="openModal('../../../images/yagyu/moves/traits/rikkai01136.jpg', 'イリュージョン（入れ替わり作戦）時。見た目はもちろんだが、表情や動作まで互いを完璧にトレースしている。')">
+        <img src="../../../images/yagyu/moves/traits/rikkai01065.jpg" alt="rikkai01065" onclick="openModal('../../../images/yagyu/moves/traits/rikkai01065.jpg', 'イリュージョン（入れ替わり作戦）時。後ろ姿では判別不能。')">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">×</span>
+      <img id="modal-img" src="" alt="拡大画像">
+      <p id="modal-caption"></p>
+    </div>
+  </div>
+
+  <script>
+    function openModal(src, caption) {
+      document.getElementById('modal-img').src = src;
+      document.getElementById('modal-caption').textContent = caption;
+      document.getElementById('modal').style.display = 'block';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

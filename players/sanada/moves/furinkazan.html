@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>風林火山-真田弦一郎 | Log_yanagirenji</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+    .sidebar {
+      width: 220px;
+      background-color: #dcdcdc;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .sidebar h1 {
+      font-size: 16px;
+      margin-bottom: 5px;
+      color: #222;
+    }
+    .sidebar h2 {
+      font-size: 14px;
+      margin-bottom: 16px;
+      color: darkred;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      font-size: 14px;
+    }
+    .sidebar li {
+      margin-bottom: 8px;
+    }
+    .sidebar li.active {
+      font-weight: bold;
+      color: darkred;
+    }
+    .sidebar a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+    .main {
+      flex: 1;
+      padding: 40px;
+      background-color: #fff;
+      overflow-y: auto;
+    }
+    h1 {
+      font-size: 24px;
+      color: darkred;
+      margin-bottom: 20px;
+    }
+    .description {
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    .observation-log,
+    .evaluation {
+      margin-bottom: 30px;
+    }
+    .observation-log h2,
+    .evaluation h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 4px;
+    }
+    .observation-log ul,
+    .evaluation ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .observation-log li,
+    .evaluation li {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+    .thumb-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .thumb-gallery img {
+      width: 200px;
+      height: auto;
+      cursor: pointer;
+      border: 1px solid #aaa;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    .modal-content {
+      position: relative;
+      margin: 10% auto;
+      padding: 20px;
+      background: #fff;
+      width: 90%;
+      max-width: 600px;
+    }
+    .modal-content img {
+      width: 100%;
+    }
+    .modal-content p {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h1>技術研究ログ</h1>
+      <h2>｜真田弦一郎</h2>
+      <ul>
+        <li class="active">- 風林火山</li>
+        <li><a href="muga.html">- 無我の境地</a></li>
+        <li><a href="traits.html">- 癖・兆候</a></li>
+        <li><a href="../index.html">[Player: Sanada Genichirou]</a></li>
+        <li><a href="../../../index.html">[TOP]</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <h1>風林火山｜Observation Notes</h1>
+      <div class="description">
+<p style="font-size: 13px; color: #666;">弦一郎の奥義「風林火山」は、四つの異なる戦術を切り替えて戦う独自の総合戦闘スタイルである。<br>
+
+・「風」：居合道の動きを応用した超高速スイングで放たれる一撃。ただし、一振りごとに型を収めるため、連打には適さない。<br>
+
+・「林」：あらゆる回転や変化球を柔らかく受け流す守りの型。相手の技巧に動じることなくその力をいなす。<br>
+
+・「火」：相手のラケットを弾き飛ばすほどの爆発的な威力をもった重打を連発する攻撃スタイル。その威力もさることながら迫力で相手を威圧する。<br>
+
+・「山」：いかなる攻撃にも微動だにせず構える、堅牢な防御の型。</p>
+      </div>
+
+      <div class="evaluation">
+        <h2>技の評価</h2>
+<p style="font-size: 13px; color: #666;">四つの型を的確に使い分けることで試合の主導権を掌握し、圧倒的な重圧を相手に与える。<br>
+ただ風林火山を弦一郎に出させるに至るほどの選手は少なく、このデータもまだ未知数である。</p>
+        <ul>
+          <li>応用力　：◎</li>
+          <li>精神力　：◎</li>
+          <li>持続力　：◯</li>
+          <li>再現性　：◎</li>
+        </ul>
+      </div>
+
+      <div style="font-size: 13px; color: darkred; font-weight: bold; margin: 20px 0 8px;">
+        ▶ 観察記録ファイル（全6枚）
+      </div>
+
+      <div class="thumb-gallery">
+        <img src="../../../images/sanada/moves/furinkazan/rikkai02172.jpg" alt="rikkai02172" onclick="openModal('../../../images/sanada/moves/furinkazan/rikkai02172.jpg', '「風」構え：俊敏に動き出す直前の腰の落とし方に注目。')">
+        <img src="../../../images/sanada/moves/furinkazan/rikkai02171.jpg" alt="rikkai02171" onclick="openModal('../../../images/sanada/moves/furinkazan/rikkai02171', '「風」発動時：超高速スイングで相手の追随を許さない。')">
+        <img src="../../../images/sanada/moves/furinkazan/rikkai02233.jpg" alt="rikkai02233" onclick="openModal('../../../images/sanada/moves/furinkazan/rikkai02233.jpg', '「火」構え：攻撃的フォーム。右手を大きく引く。')">
+        <img src="../../../images/sanada/moves/furinkazan/rikkai02257.jpg" alt="rikkai02257" onclick="openModal('../../../images/sanada/moves/furinkazan/rikkai02257.jpg', '「火」発動後：重心を低く保ち、反動に備えて構える。')">
+      </div>
+
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">×</span>
+          <img id="modal-img" src="" alt="拡大画像">
+          <p id="modal-caption"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openModal(src, caption) {
+      document.getElementById('modal-img').src = src;
+      document.getElementById('modal-caption').textContent = caption;
+      document.getElementById('modal').style.display = 'block';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

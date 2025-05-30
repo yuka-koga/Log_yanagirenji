@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>綱渡り-丸井ブン太 | Log_yanagirenji</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+    .sidebar {
+      width: 220px;
+      background-color: #dcdcdc;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .sidebar h1 {
+      font-size: 16px;
+      margin-bottom: 5px;
+      color: #222;
+    }
+    .sidebar h2 {
+      font-size: 14px;
+      margin-bottom: 16px;
+      color: darkred;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      font-size: 14px;
+    }
+    .sidebar li {
+      margin-bottom: 8px;
+    }
+    .sidebar li.active {
+      font-weight: bold;
+      color: darkred;
+    }
+    .sidebar a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+    .main {
+      flex: 1;
+      padding: 40px;
+      background-color: #fff;
+      overflow-y: auto;
+    }
+    h1 {
+      font-size: 24px;
+      color: darkred;
+      margin-bottom: 20px;
+    }
+    .description {
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    .evaluation {
+      margin-bottom: 30px;
+    }
+    .evaluation h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 4px;
+    }
+    .evaluation ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .evaluation li {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+    .thumb-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .thumb-gallery img {
+      width: 200px;
+      height: auto;
+      cursor: pointer;
+      border: 1px solid #aaa;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    .modal-content {
+      position: relative;
+      margin: 10% auto;
+      padding: 20px;
+      background: #fff;
+      width: 90%;
+      max-width: 600px;
+    }
+    .modal-content img {
+      width: 100%;
+    }
+    .modal-content p {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h1>技術研究ログ</h1>
+      <h2>｜丸井ブン太</h2>
+      <ul>
+        <li><a href="tettyu.html">- 鉄柱当て</a></li>
+        <li class="active">- 綱渡り</li>
+        <li><a href="traits.html">- 癖・兆候</a></li>
+        <li><a href="../index.html">[Player: Marui Bunta]</a></li>
+        <li><a href="../../../index.html">[TOP]</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <h1>綱渡り｜Observation Notes</h1>
+      <div class="description">
+        <p style="font-size: 13px; color: #666;">
+          ネット白帯を狙い、ボールをまるで綱の上を転がすようにして相手コートへ落とす妙技。<br>
+          わずかな力加減とコントロールが要求され、相手選手や観客のどよめきを誘う芸術的ショット。<br>
+          試合後半や相手が疲労している場面で使用される傾向にある。
+        </p>
+      </div>
+      <div class="evaluation">
+        <h2>技の評価</h2>
+        <p style="font-size: 13px; color: #666;">
+          成功すれば心理的インパクトは絶大。魅せ技の側面も強い。<br>
+          丸井自身が楽しんで打っているため、流れを変えるアクセントとしても有効に働く。<br>
+風などの環境に左右される場面も若干あるが、本人の勘の鋭さで使用シーンを的確に判断している。
+        </p>
+        <ul>
+          <li>精度　　：◯</li>
+          <li>意外性　：◎</li>
+          <li>心理効果：◎</li>
+          <li>実用性　：◯</li>
+        </ul>
+      </div>
+      <div style="font-size: 13px; color: darkred; font-weight: bold; margin: 20px 0 8px;">
+        ▶ 観察記録ファイル（全2枚）
+      </div>
+      <div class="thumb-gallery">
+        <img src="../../../images/marui/moves/tsunawatari/rikkai00682.jpg" alt="rikkai00682" onclick="openModal('../../../images/marui/moves/tsunawatari/rikkai00682.jpg', 'ボールがネット上を滑る様子。')">
+        <img src="../../../images/marui/moves/tsunawatari/rikkai00683.jpg" alt="rikkai00683" onclick="openModal('../../../images/marui/moves/tsunawatari/rikkai00683.jpg', '着弾点に対して相手が完全に動けなかったシーン。')">
+      </div>
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">×</span>
+          <img id="modal-img" src="" alt="拡大画像">
+          <p id="modal-caption"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function openModal(src, caption) {
+      document.getElementById('modal-img').src = src;
+      document.getElementById('modal-caption').textContent = caption;
+      document.getElementById('modal').style.display = 'block';
+    }
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

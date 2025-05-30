@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>スプリットステップ-切原赤也 | Log_yanagirenji</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+    .sidebar {
+      width: 220px;
+      background-color: #dcdcdc;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .sidebar h1 {
+      font-size: 16px;
+      margin-bottom: 5px;
+      color: #222;
+    }
+    .sidebar h2 {
+      font-size: 14px;
+      margin-bottom: 16px;
+      color: darkred;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      font-size: 14px;
+    }
+    .sidebar li {
+      margin-bottom: 8px;
+    }
+    .sidebar li.active {
+      font-weight: bold;
+      color: darkred;
+    }
+    .sidebar a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+    .main {
+      flex: 1;
+      padding: 40px;
+      background-color: #fff;
+      overflow-y: auto;
+    }
+    h1 {
+      font-size: 24px;
+      color: darkred;
+      margin-bottom: 20px;
+    }
+    .description {
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    .observation-log,
+    .evaluation {
+      margin-bottom: 30px;
+    }
+    .observation-log h2,
+    .evaluation h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 4px;
+    }
+    .observation-log ul,
+    .evaluation ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .observation-log li,
+    .evaluation li {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+    .thumb-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .thumb-gallery img {
+      width: 200px;
+      height: auto;
+      cursor: pointer;
+      border: 1px solid #aaa;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    .modal-content {
+      position: relative;
+      margin: 10% auto;
+      padding: 20px;
+      background: #fff;
+      width: 90%;
+      max-width: 600px;
+    }
+    .modal-content img {
+      width: 100%;
+    }
+    .modal-content p {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h1>技術研究ログ</h1>
+      <h2>｜切原赤也</h2>
+      <ul>
+        <li class="active">- スプリットステップ</li>
+    <li><a href="knuckle.html">- ナックルサーブ</a></li>
+    <li><a href="muga.html">- 無我の境地</a></li>
+        <li><a href="traits.html">- 癖・兆候</a></li>
+        <li><a href="../index.html">[Player: Kirihara Akaya]</a></li>
+        <li><a href="../../../index.html">[TOP]</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <h1>スプリットステップ｜Observation Notes</h1>
+      <div class="description">
+        <p style="font-size: 13px; color: #666;">
+打球方向を判断する際に対角にある足一本のみで地面を蹴り、初動を取る。<br>
+これにより身体の軸移動が極端に早まり、初期加速において最大1.5m先の球に反応可能。<br>
+この動作は極めて攻撃的な判断に基づき、またそれはプレイスタイル全体にも共通する特異性だと言える。<br>
+      </div>
+
+      <div class="evaluation">
+        <h2>技の評価</h2>
+        <p style="font-size: 13px; color: #666;">赤也特有の抜群の瞬発力と速度がなせる技。<br>
+        スピード変化の直前に仕込まれる場合が多く、相手のリズムを外すトリガーとしても機能する。</p>
+        <ul>
+          <li>発動頻度：◯</li>
+          <li>対応力　：◯</li>
+          <li>意外性　：◎</li>
+        </ul>
+      </div>
+
+      <div style="font-size: 13px; color: darkred; font-weight: bold; margin: 20px 0 8px;">
+        ▶ 観察記録ファイル（全2枚）
+      </div>
+
+      <div class="thumb-gallery">
+        <img src="../../../images/akaya/moves/splitstep/rikkai00204.jpg" alt="rikkai00204.pmg" onclick="openModal('../../../images/akaya/moves/splitstep/rikkai00204.jpg', '反応前の沈み込み姿勢。')">
+        <img src="../../../images/akaya/moves/splitstep/rikkai00203.jpg" alt="rikkai00203" onclick="openModal('../../../images/akaya/moves/splitstep/rikkai00203.jpg', 'ステップからジャンプ直前。')">
+      </div>
+
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">×</span>
+          <img id="modal-img" src="" alt="拡大画像">
+          <p id="modal-caption"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openModal(src, caption) {
+      document.getElementById('modal-img').src = src;
+      document.getElementById('modal-caption').textContent = caption;
+      document.getElementById('modal').style.display = 'block';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

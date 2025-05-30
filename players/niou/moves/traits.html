@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>アクセス遮断 | Log_yanagirenji</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      color: #00ff00;
+      font-family: "Courier New", monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .message-box {
+      text-align: center;
+      animation: flicker 1.5s infinite;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    #typewriter {
+      font-size: 16px;
+      min-height: 2em;
+    }
+
+    #countdown {
+      font-size: 14px;
+      margin-top: 20px;
+      visibility: hidden;
+    }
+
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+      }
+      20%, 22%, 24%, 55% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="message-box">
+    <h1>──アクセス遮断：ERROR 210──</h1>
+    <p id="typewriter"></p>
+    <p id="countdown">トップに戻るまで：5秒</p>
+  </div>
+
+  <script>
+    const text = "残念無念、また来週<br>ケロケロ🐸";
+    const el = document.getElementById("typewriter");
+    let i = 0;
+    let seconds = 5;
+
+    function typeNext() {
+      if (i < text.length) {
+        if (text[i] === "<") {
+          const closeIndex = text.indexOf(">", i);
+          if (closeIndex !== -1) {
+            el.innerHTML += text.slice(i, closeIndex + 1);
+            i = closeIndex + 1;
+          }
+        } else {
+          el.innerHTML += text[i];
+          i++;
+        }
+        setTimeout(typeNext, 200);
+      } else {
+        document.getElementById("countdown").style.visibility = "visible";
+        startCountdown();
+      }
+    }
+
+    function startCountdown() {
+      const countdownEl = document.getElementById("countdown");
+      const interval = setInterval(() => {
+        seconds--;
+        countdownEl.textContent = `トップに戻るまで：${seconds}秒`;
+        if (seconds <= 0) {
+          clearInterval(interval);
+          window.location.href = "../../../index.html";
+        }
+      }, 1000);
+    }
+
+    typeNext();
+  </script>
+</body>
+</html>
