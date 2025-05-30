@@ -53,7 +53,7 @@
       border: 1px solid #ccc;
     }
     form input, form textarea {
-      width: 100%;
+      width: 95%;
       margin-bottom: 10px;
       padding: 8px;
       font-size: 14px;
@@ -68,6 +68,23 @@
     form button:hover {
       background-color: #a00;
     }
+.back-link {
+  text-align: center;
+  margin-top: 20px;
+}
+.back-link a {
+  font-size: 13px;
+  color: darkred;
+  text-decoration: none;
+  border: 1px solid darkred;
+  padding: 6px 12px;
+  border-radius: 4px;
+  display: inline-block;
+}
+.back-link a:hover {
+  background-color: darkred;
+  color: white;
+}
   </style>
 </head>
 <body>
@@ -133,7 +150,18 @@
       <input type="text" placeholder="名前（任意）">
       <textarea rows="4" placeholder="投稿内容を入力"></textarea>
       <button type="submit">投稿する</button>
+<p class="error-message" style="color: darkred; font-size: 13px;"></p>
     </form>
+  </div>
+<script>
+  document.querySelector("form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const errorMessage = document.querySelector(".error-message");
+    errorMessage.textContent = "※このスレッドにはこれ以上投稿できません（renji）";
+  });
+</script>
+  <div class="back-link">
+    <a href="index.html">一覧に戻る</a>
   </div>
 </body>
 </html>
