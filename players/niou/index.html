@@ -132,9 +132,70 @@
       text-decoration: underline;
       color: black;
     }
+.menu-toggle {
+  display: none;
+  background-color: darkred;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .sidebar {
+    display: none;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #bbb;
+    background-color: #dcdcdc;
+    z-index: 10;
+  }
+
+  .sidebar.show {
+    display: block;
+  }
+
+  .main {
+    padding: 20px;
+  }
+}
+.profile-flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .profile-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-flex img {
+    max-width: 80%;
+    height: auto;
+  }
+
+  .profile-flex div {
+    text-align: left;
+  }
+}
   </style>
 </head>
 <body>
+<button class="menu-toggle" onclick="toggleSidebar()">☰ MENU</button>
   <div class="container">
     <div class="sidebar">
       <h1>Player</h1>
@@ -154,7 +215,7 @@
       <h2>【Player: Niou Masaharu｜仁王雅治】</h2>
 
       <div class="profile-box">
-  <div style="display: flex; align-items: flex-start; gap: 20px;">
+<div class="profile-flex">
     <img src="../../images/niou/rikkai00997.jpg" alt="仁王プロフィール写真" style="width: 150px; height: auto; border: 1px solid #bbb;" />
 
     <div>
@@ -218,6 +279,12 @@
   setInterval(() => {
     if (Math.random() < 0.7) createFrog();
   }, 800);
+</script>
+<script>
+  function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('show');
+  }
 </script>
 </body>
 </html>

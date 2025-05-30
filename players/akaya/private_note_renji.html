@@ -3,6 +3,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>非公開メモ | Log_yanagirenji</title>
   <style>
     body {
@@ -88,6 +89,41 @@
 .back-button:hover {
   background-color: darkred;
   color: white;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 12px;
+  }
+
+  .box {
+    padding: 20px;
+    margin-bottom: 24px;
+    width: 90%;           /* ← ボックスの横幅を狭める（背景が見える） */
+    max-width: 600px;     /* 任意：PC用の最大幅もややタイトに */
+  }
+
+  .memo-content p {
+    font-size: 12px;
+    padding: 12px;
+  }
+
+  .memo-content img {
+    max-height: 220px;
+  }
+
+  input[type="text"], input[type="password"] {
+    padding: 5px;
+    font-size: 13px;
+  }
+
+  button {
+    padding: 7px 15px;
+    font-size: 13px;
+  }
+
+  h2 {
+    font-size: 11px;
+  }
 }
   </style>
 </head>

@@ -71,9 +71,76 @@
       font-size: 14px;
       line-height: 1.6;
     }
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .log-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    padding: 15px;
+    height: auto;
+    position: static;
+  }
+
+  .main-log {
+    padding: 20px;
+  }
+
+  .log-entry h2 {
+    font-size: 18px;
+  }
+
+  .log-entry p {
+    font-size: 13px;
+  }
+}
+.menu-toggle {
+  display: none;
+  background-color: darkred;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .log-sidebar {
+    display: none;
+    width: 100%;
+    padding: 20px;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    background-color: #f0f0f0;
+    position: relative;
+    z-index: 10;
+  }
+
+  .log-sidebar.show {
+    display: block;
+  }
+
+  .main-log {
+    padding: 20px;
+  }
+}
   </style>
 </head>
 <body>
+<button class="menu-toggle" onclick="toggleSidebar()">☰ MENU</button>
   <div class="log-sidebar">
     <details>
       <summary>5月</summary>
@@ -391,5 +458,11 @@
 </div>
 
   </div>
+<script>
+  function toggleSidebar() {
+    const sidebar = document.querySelector('.log-sidebar');
+    sidebar.classList.toggle('show');
+  }
+</script>
 </body>
 </html>

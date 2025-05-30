@@ -131,9 +131,48 @@
       font-size: 18px;
       color: #333;
     }
+.menu-toggle {
+  display: none;
+  background-color: darkred;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .sidebar {
+    display: none;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #bbb;
+    background-color: #dcdcdc;
+    z-index: 10;
+  }
+
+  .sidebar.show {
+    display: block;
+  }
+
+  .main {
+    padding: 20px;
+  }
+}
   </style>
 </head>
 <body>
+<button class="menu-toggle" onclick="toggleSidebar()">☰ MENU</button>
   <div class="container">
     <div class="sidebar">
       <h1>技術研究ログ</h1>
@@ -170,8 +209,8 @@
         </ul>
       </div>
 
-      <div style="font-size: 13px; color: darkred; font-weight: bold; margin: 20px 0 8px;">
-        ▶ 観察記録ファイル（全3枚）
+      <div style="font-size: 13px; color: black; font-weight: bold; margin: 20px 0 8px;">
+        📷 記録ファイル（全3枚）
       </div>
 
       <div class="thumb-gallery">
@@ -201,5 +240,11 @@
       document.getElementById('modal').style.display = 'none';
     }
   </script>
+<script>
+  function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('show');
+  }
+</script>
 </body>
 </html>

@@ -162,9 +162,48 @@
   overflow-x: auto;
   margin-bottom: 30px;
 }
+.menu-toggle {
+  display: none;
+  background-color: darkred;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .sidebar {
+    display: none;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #bbb;
+    background-color: #dcdcdc;
+    z-index: 10;
+  }
+
+  .sidebar.show {
+    display: block;
+  }
+
+  .main {
+    padding: 20px;
+  }
+}
   </style>
 </head>
 <body>
+<button class="menu-toggle" onclick="toggleSidebar()">☰ MENU</button>
   <div class="container">
     <div class="sidebar">
       <h1>技術研究ログ</h1>
@@ -229,7 +268,7 @@
 <p style="font-size: 13px; color: #666;">兆候と思われるもの。分析前。</p>
 <details>
     <summary style="font-size: 14px; font-weight: bold; color: darkred; cursor: pointer; margin: 10px 0;">
-      ▶︎ memo
+      memo
     </summary>
     <div style="padding-top: 10px;">
 
@@ -392,5 +431,11 @@
       }
     }
   </script>
+<script>
+  function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('show');
+  }
+</script>
 </body>
 </html>
