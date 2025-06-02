@@ -12,6 +12,40 @@
       padding: 40px;
       color: #333;
     }
+    .hidden { display: none; }
+    .login-box {
+      max-width: 400px;
+      margin: 100px auto;
+      padding: 30px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .login-box h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: darkred;
+    }
+    .login-box input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+    }
+    .login-box button {
+      padding: 10px 20px;
+      background-color: darkred;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .login-box .error {
+      color: darkred;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
     h1 {
       font-size: 28px;
       margin-bottom: 30px;
@@ -23,9 +57,9 @@
     .link-list li {
       margin: 12px 0;
     }
-.link-list li span {
-  font-size: 16px;
-}
+    .link-list li span {
+      font-size: 16px;
+    }
     .link-list a {
       text-decoration: none;
       font-size: 16px;
@@ -36,51 +70,64 @@
       color: black;
       text-decoration: underline;
     }
-.update-box {
-  background-color: #eeeeee;
-  border-left: 4px solid darkred;
-  padding: 10px 16px;
-  margin-bottom: 30px;
-  font-family: Courier, monospace;
-  font-size: 14px;
-  color: #444;
-}
-.update-box .update-title {
-  font-weight: bold;
-  margin-bottom: 6px;
-  font-size: 14px;
-  color: #111;
-}
-.update-box .update-entry a {
-  color: darkred;
-  text-decoration: none;
-}
-.update-box .update-entry a:hover {
-  text-decoration: underline;
-  color: black;
-}
-.update-box .update-more {
-  text-align: right;
-  font-size: 12px;
-  margin-top: 4px;
-}
-.update-box .update-more a {
-  color: #666;
-  text-decoration: none;
-}
-.update-box .update-more a:hover {
-  text-decoration: underline;
-}
+    .update-box {
+      background-color: #eeeeee;
+      border-left: 4px solid darkred;
+      padding: 10px 16px;
+      margin-bottom: 30px;
+      font-family: Courier, monospace;
+      font-size: 14px;
+      color: #444;
+    }
+    .update-box .update-title {
+      font-weight: bold;
+      margin-bottom: 6px;
+      font-size: 14px;
+      color: #111;
+    }
+    .update-box .update-entry a {
+      color: darkred;
+      text-decoration: none;
+    }
+    .update-box .update-entry a:hover {
+      text-decoration: underline;
+      color: black;
+    }
+    .update-box .update-more {
+      text-align: right;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+    .update-box .update-more a {
+      color: #666;
+      text-decoration: none;
+    }
+    .update-box .update-more a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
+
+<!-- ログイン画面 -->
+<div id="login-screen" class="login-box">
+  <h2>ログインが必要です</h2>
+  <input type="text" id="login-id" placeholder="ユーザーID">
+  <input type="password" id="login-pass" placeholder="パスワード">
+  <button onclick="checkLogin()">ログイン</button>
+  <p class="error" id="login-error"></p>
+</div>
+
+<!-- トップページ本体（初期状態では非表示） -->
+<div id="main-content" class="hidden">
   <h1>Log - 立海大学附属中学校テニス部</h1>
 
-<div class="update-box">
-  <div class="update-title">最新の更新</div>
-  <div class="update-entry">07/06 00:08　<a href="players/akaya/index.html">切原赤也-Player</a></div>
-  <div class="update-more"><a href="logs/update_log.html">more →</a></div>
-</div>
+  <div class="update-box">
+    <div class="update-title">最新の更新</div>
+    <div class="update-entry">07/10 23:56　<a href="players/akaya/index.html">切原赤也-Player</a></div>
+    <div class="update-more"><a href="logs/update_log.html">more →</a></div>
+  </div>
+
   <h2 style="font-size: 20px; margin-top: 40px; margin-bottom: 10px; color: #222;">▼ 個人記録</h2>
   <ul class="link-list">
     <li><a href="players/yukimura/index.html">- 幸村精市</a></li>
@@ -96,7 +143,44 @@
   <h2 style="font-size: 20px; margin-top: 40px; margin-bottom: 10px; color: #222;">▼ 全体記録</h2>
   <ul class="link-list">
     <li><a href="training/index.html">- Training log</a></li>
-<li><a href="bbs/index.html">- BBS</a></li>
+    <li><a href="bbs/index.html">- BBS</a></li>
   </ul>
-</body>
+<button onclick="logout()">LOG OUT</button>
+</div>
 
+<script>
+  // 初回読み込み時にログイン済みかチェック
+  window.onload = function () {
+    if (localStorage.getItem('isLoggedIn') === 'true') {
+      document.getElementById('login-screen').classList.add('hidden');
+      document.getElementById('main-content').classList.remove('hidden');
+    }
+  };
+
+  function checkLogin() {
+    const id = document.getElementById('login-id').value;
+    const pw = document.getElementById('login-pass').value;
+    const error = document.getElementById('login-error');
+    const allowedIds = ['seiichi', 'admin'];
+    const allowedPasswords = ['yakiniku', 'adminpass'];
+
+    if (allowedIds.includes(id) && allowedPasswords.includes(pw)) {
+      // ログイン状態を保存
+      localStorage.setItem('isLoggedIn', 'true');
+      document.getElementById('login-screen').classList.add('hidden');
+      document.getElementById('main-content').classList.remove('hidden');
+    } else {
+      error.textContent = '※IDまたはパスワードが違います。';
+    }
+  }
+</script>
+
+<script>
+  function logout() {
+    localStorage.removeItem('isLoggedIn');
+    location.reload(); // ページを再読み込みしてログイン画面へ戻す
+  }
+</script>
+
+</body>
+</html>

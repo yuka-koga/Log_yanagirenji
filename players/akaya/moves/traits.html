@@ -416,20 +416,23 @@
       document.getElementById('modal').style.display = 'none';
     }
 
-    function checkHiddenAuth() {
-      const id = document.getElementById('hidden-id').value;
-      const pw = document.getElementById('hidden-pw').value;
-      const error = document.getElementById('auth-error');
-      const hiddenContent = document.getElementById('hidden-content');
+function checkHiddenAuth() {
+  const id = document.getElementById('hidden-id').value;
+  const pw = document.getElementById('hidden-pw').value;
+  const error = document.getElementById('auth-error');
+  const hiddenContent = document.getElementById('hidden-content');
 
-      if (id === 'renji' && pw === 'meikyoshisui') {
-        hiddenContent.style.display = 'block';
-        document.getElementById('auth-box').style.display = 'none';
-        error.textContent = '';
-      } else {
-        error.textContent = 'IDまたはパスワードが違います。';
-      }
-    }
+  const correctId = 'renji';
+  const allowedPasswords = ['meikyoshisui', 'meikyoushisui', 'meikyousisui']; // ←ここに追加
+
+  if (id === correctId && allowedPasswords.includes(pw)) {
+    hiddenContent.style.display = 'block';
+    document.getElementById('auth-box').style.display = 'none';
+    error.textContent = '';
+  } else {
+    error.textContent = 'IDまたはパスワードが違います。';
+  }
+}
   </script>
 <script>
   function toggleSidebar() {

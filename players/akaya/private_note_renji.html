@@ -186,8 +186,8 @@
 <div id="extraMessage" class="memo-content hidden">
   <p>（追記）<br>
   このメモを読んでいるのは精市だろうか。あるいは仁王か？<br>
-久しぶりに読み返して随分懐かしい気持ちになった。<br>
-いつかまたこのページを見つけてしまった者のために、念のためその後の経過を残しておく。<br>
+久しぶりに読み返して随分懐かしい気持ちになった。<br><br>
+いつかまたこのページを見つけてしまった者のために、念のためその後の経過を残しておく。<br><br>
 結局、精市に言われたにも関わらず俺は記録をしばらく続けていて、<br>精市の復帰とともに強く言われて無理やり記録を止めた<br>
 それでも脳はデータを取り続けていたが、俺は全国大会に向けて赤也とダブルスを組んだ。<br><br>
 楽しかった。<br><br>
@@ -209,12 +209,12 @@
     const secretBox = document.getElementById('secret');
 
     const correctId = 'akaya';
-    const correctPw = 'sanrenpa';
+    const allowedPasswords = ['sanrenpa', 'sannrennpa'];
 
-    if (id === correctId && pw === correctPw) {
-      loginBox.classList.add('hidden');
-      secretBox.classList.remove('hidden');
-      error.textContent = '';
+    if (id === correctId && allowedPasswords.includes(pw)) {
+  loginBox.classList.add('hidden');
+  secretBox.classList.remove('hidden');
+  error.textContent = '';
 
       // 15秒後に通知を表示
       setTimeout(() => {
