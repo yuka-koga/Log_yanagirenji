@@ -201,38 +201,35 @@
   </div>
 
 <script>
-  function checkLogin() {
-    const id = document.getElementById('userid').value;
-    const pw = document.getElementById('password').value;
-    const error = document.getElementById('error');
-    const loginBox = document.getElementById('login');
-    const secretBox = document.getElementById('secret');
+function checkLogin() {
+  const id = document.getElementById('userid').value;
+  const pw = document.getElementById('password').value;
+  const error = document.getElementById('error');
+  const loginBox = document.getElementById('login');
+  const secretBox = document.getElementById('secret');
 
-    const correctId = 'akaya';
-    const allowedPasswords = ['sanrenpa', 'sannrennpa'];
+  const correctId = 'akaya';
+  const allowedPasswords = ['sanrenpa', 'sannrennpa'];
 
-    if (id === correctId && allowedPasswords.includes(pw)) {
-  loginBox.classList.add('hidden');
-  secretBox.classList.remove('hidden');
-  error.textContent = '';
+  const idCorrect = id === correctId;
+  const pwCorrect = allowedPasswords.includes(pw);
 
-      // 15秒後に通知を表示
-      setTimeout(() => {
-        document.getElementById('popup').classList.remove('hidden');
-      }, 10000);
-    } else if (id === correctId) {
-      error.textContent = '※パスワードが違います。';
-    } else if (pw === correctPw) {
-      error.textContent = '※IDが違います。';
-    } else {
-      error.textContent = '※ID・パスワードが違います。';
-    }
+  if (idCorrect && pwCorrect) {
+    loginBox.classList.add('hidden');
+    secretBox.classList.remove('hidden');
+    error.textContent = '';
+
+    setTimeout(() => {
+      document.getElementById('popup').classList.remove('hidden');
+    }, 10000);
+  } else if (idCorrect && !pwCorrect) {
+    error.textContent = '※パスワードが違います。';
+  } else if (!idCorrect && pwCorrect) {
+    error.textContent = '※IDが違います。';
+  } else {
+    error.textContent = '※ID・パスワードが違います。';
   }
-
-  function showExtraMessage() {
-    document.getElementById('popup').classList.add('hidden');
-    document.getElementById('extraMessage').classList.remove('hidden');
-  }
+}
 </script>
 
 </body>
