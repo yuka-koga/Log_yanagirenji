@@ -230,6 +230,10 @@ function checkLogin() {
     error.textContent = '※ID・パスワードが違います。';
   }
 }
+function showExtraMessage() {
+    document.getElementById('popup').classList.add('hidden');
+    document.getElementById('extraMessage').classList.remove('hidden');
+  }
 </script>
 
 </body>
